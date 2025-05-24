@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .flag-text {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-bowl-food"></i> Taste The World
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-bs-toggle="dropdown">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container">
+
+        <h1 class="mb-4 text-center">Taste The World – Ochutnej svět na talíři</h1>
+
+        <p><strong>Vítejte!</strong> Podívejte se na nové recepty na této stránce! Pro více receptů rozklikněte kolonku recepty!</p>
+
+        <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="topRecepty-tab" data-bs-toggle="tab" data-bs-target="#topRecepty"
+                    type="button" role="tab" aria-controls="topRecepty" aria-selected="true">Top Recepty</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="noveRecepty-tab" data-bs-toggle="tab" data-bs-target="#noveRecepty"
+                    type="button" role="tab" aria-controls="noveRecepty" aria-selected="false">Nové Recepty</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tipy-tab" data-bs-toggle="tab" data-bs-target="#tipy" type="button"
+                    role="tab" aria-controls="tipy" aria-selected="false">Tipy a Triky</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="topRecepty" role="tabpanel" aria-labelledby="topRecepty-tab">
+                <h4 class="mb-3">⭐ Nejoblíbenější recepty</h4>
+                <div class="accordion" id="accordionTop">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOneTop">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOneTop" aria-expanded="true" aria-controls="collapseOneTop">
+                                Pho Bo – Vietnamská hovězí polévka
+                                <span class="badge bg-light text-dark ms-auto flag-text">
+                                    <span class="fi fi-vn"></span> Vietnam
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseOneTop" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOneTop" data-bs-parent="#accordionTop">
+                            <div class="accordion-body">
+                                Tradiční vývar z hovězích kostí, rýžové nudle, bylinky a chilli – oblíbený pokrm celého
+                                světa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwoTop">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwoTop" aria-expanded="false" aria-controls="collapseTwoTop">
+                                Sushi – Základy přípravy doma
+                                <span class="badge bg-light text-dark ms-auto flag-text">
+                                    <span class="fi fi-jp"></span> Japonsko
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseTwoTop" class="accordion-collapse collapse" aria-labelledby="headingTwoTop"
+                            data-bs-parent="#accordionTop">
+                            <div class="accordion-body">
+                                Nauč se základní druhy sushi, jak vařit rýži a jak správně balit rolky.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThreeTop">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThreeTop" aria-expanded="false"
+                                aria-controls="collapseThreeTop">
+                                Pad Thai – Thajské nudle s krevetami
+                                <span class="badge bg-light text-dark ms-auto flag-text">
+                                    <span class="fi fi-th"></span> Thajsko
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseThreeTop" class="accordion-collapse collapse" aria-labelledby="headingThreeTop"
+                            data-bs-parent="#accordionTop">
+                            <div class="accordion-body">
+                                Sladkokyselé a pikantní nudle s krevetami, arašídy a limetkou.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="noveRecepty" role="tabpanel" aria-labelledby="noveRecepty-tab">
+                <h4 class="mb-3">🆕 Nové recepty</h4>
+                <div class="accordion" id="accordionNew">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOneNew">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOneNew" aria-expanded="true" aria-controls="collapseOneNew">
+                                Ramen – Japonská nudlová polévka
+                                <span class="badge bg-light text-dark ms-auto flag-text">
+                                    <span class="fi fi-jp"></span> Japonsko
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseOneNew" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOneNew" data-bs-parent="#accordionNew">
+                            <div class="accordion-body">
+                                Horký vývar s vepřovým masem, nudlemi, vejcem a zeleninou.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwoNew">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwoNew" aria-expanded="false" aria-controls="collapseTwoNew">
+                                Bun Bo Hue – Pikantní vietnamská polévka
+                                <span class="badge bg-light text-dark ms-auto flag-text">
+                                    <span class="fi fi-vn"></span> Vietnam
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseTwoNew" class="accordion-collapse collapse" aria-labelledby="headingTwoNew"
+                            data-bs-parent="#accordionNew">
+                            <div class="accordion-body">
+                                Silný pikantní vývar s hovězím masem a rýžovými nudlemi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipy a Triky -->
+            <div class="tab-pane fade" id="tipy" role="tabpanel" aria-labelledby="tipy-tab">
+                <h4 class="mb-3">💡 Tipy a Triky pro vaření</h4>
+                <div class="accordion" id="accordionTips">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOneTips">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOneTips" aria-expanded="true" aria-controls="collapseOneTips">
+                                Jak správně vařit rýži
+                            </button>
+                        </h2>
+                        <div id="collapseOneTips" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOneTips" data-bs-parent="#accordionTips">
+                            <div class="accordion-body">
+                                Používej správný poměr vody a rýže, a nech ji odpočinout po vaření.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwoTips">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwoTips" aria-expanded="false" aria-controls="collapseTwoTips">
+                                Jak na správný sushi rýžový ocet
+                            </button>
+                        </h2>
+                        <div id="collapseTwoTips" class="accordion-collapse collapse" aria-labelledby="headingTwoTips"
+                            data-bs-parent="#accordionTips">
+                            <div class="accordion-body">
+                                Používej speciální sushi ocet, ne obyčejný, aby bylo sushi autentické.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

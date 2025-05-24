@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #dee2e6;
+            z-index: 0;
+        }
+
+        .timeline-step {
+            position: relative;
+            z-index: 1;
+            background-color: #0d6efd;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        .timeline-step:hover {
+            transform: scale(1.1);
+        }
+
+        .progress-bar-bg {
+            background-color: #dee2e6;
+            height: 4px;
+            position: absolute;
+            top: 18px;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .progress-bar-fill {
+            background-color: #0d6efd;
+            height: 4px;
+            position: absolute;
+            top: 18px;
+            left: 0;
+            width: 0%;
+            z-index: 1;
+            transition: width 0.4s;
+        }
+
+        .info {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Progres vývoje stránky</h2>
+
+        <div class="timeline position-relative">
+            <div class="progress-bar-bg"></div>
+            <div class="progress-bar-fill" id="progressFill"></div>
+
+            <div class="timeline-step" data-step="1" title="12:00 – Výběr tématu">1</div>
+            <div class="timeline-step" data-step="2" title="13:30 – Začátek HTML">2</div>
+            <div class="timeline-step" data-step="3" title="Večer – Úvodní stránka hotová">3</div>
+            <div class="timeline-step" data-step="4" title="Lorem ipsum 1">4</div>
+            <div class="timeline-step" data-step="5" title="Lorem ipsum 2">5</div>
+            <div class="timeline-step" data-step="6" title="Lorem ipsum 3">6</div>
+        </div>
+
+        <div id="stepInfo" class="info"></div>
+    </div>
+
+    <script>
+        const steps = document.querySelectorAll('.timeline-step');
+        const progressFill = document.getElementById('progressFill');
+        const infoBox = document.getElementById('stepInfo');
+
+        const messages = {
+            1: "📌 24.5. ve 12:00 – Vybral jsem si nápad stránky a rozhodl, o čem bude.",
+            2: "🕐 24.5. ve 13:30 – Začal jsem tvořit HTML strukturu stránky.",
+            3: "🌙 24.5. večer – Dokončil jsem úvodní stránku a pustil se do aplikace.",
+            4: "🚧 Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            5: "🛠️ Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            6: "📈 Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        };
+
+        steps.forEach(step => {
+            step.addEventListener('click', () => {
+                const stepNum = parseInt(step.dataset.step);
+                const progress = ((stepNum - 1) / (steps.length - 1)) * 100;
+                progressFill.style.width = progress + "%";
+
+                infoBox.style.display = 'block';
+                infoBox.innerText = messages[stepNum];
+            });
+        });
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>

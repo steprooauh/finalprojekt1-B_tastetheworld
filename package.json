@@ -4,6 +4,7 @@
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "bootswatch": "^5.3.6",
+    "flag-icons": "^7.3.2",
     "tinymce": "^7.9.0"
   }
 }

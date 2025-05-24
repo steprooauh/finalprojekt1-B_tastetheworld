@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        .profile {
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Váš profil</h2><br>
+        <form action="">
+            <div class="row">
+                <div class="col-6">
+                    <p>Jméno: <input type="text" required></p>
+                    <p>Příjmení: <input type="text" required></p>
+                    <p>Uživatelské jméno: <input type="text" required></p>
+                    <p>Email: <input type="email" required></p>
+                    <p>Stát: <select class="form-select" id="stat" aria-label="Vyberte stát" required>
+                            <option value="" class="form-label" selected disabled>Vyberte stát</option>
+                            <option value="CZ">Česká republika</option>
+                            <option value="SK">Slovensko</option>
+                            <option value="DE">Německo</option>
+                            <option value="AT">Rakousko</option>
+                            <option value="PL">Polsko</option>
+                            <option value="FR">Francie</option>
+                            <option value="IT">Itálie</option>
+                            <option value="ES">Španělsko</option>
+                            <option value="US">Spojené státy</option>
+                            <option value="GB">Velká Británie</option>
+                        </select></p>
+                    <p>Heslo: <input type="password" required></p>
+                    <p>Heslo znova: <input type="password" required></p>
+                </div>
+                <div class="col-6">
+                    <img class="profile" src="img/pfp.jpg" alt="Profilová fotka"><br>
+                    <label for="">Vyberte profilovou fotku</label>
+                    <input type="file" accept=".png, .jpg, .webp" name="" id="">
+                </div>
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>
