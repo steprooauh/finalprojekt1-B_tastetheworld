@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="onas.html">O Nás</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Účet
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="prihlaseni.html">Přihlášení</a></li>
+                        <li><a class="dropdown-item active" aria-current="page" href="registrace.html">Registrace</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <form action="">
+            <h1>Zaregistrujte se!</h1>
+            <p class="form-label" style="font-size: small;">Máte již účet? Přihlašte se zde: <a
+                    href="prihlaseni.html">Klikněte zde!</a></p>
+
+            <div class="container" style="margin-top: 30px;">
+                <div class="input-group mb-5">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <div class="form-floating">
+                        <input type="text" id="user" placeholder="Napište uživatelské jméno" class="form-control" required>
+                        <label for="user">Napište uživtelské jméno</label>
+                    </div>
+                </div>
+
+                <div class="input-group mb-5">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <div class="form-floating">
+                        <input type="password" id="heslo" placeholder="Napište heslo" class="form-control" required>
+                        <label for="heslo">Napište heslo</label>
+                    </div>
+                </div>
+
+                <div class="input-group mb-5" style="margin-top: -30px;">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <div class="form-floating">
+                        <input type="password" id="heslokontrola" placeholder="Vložte heslo pro kontrolu"
+                            class="form-control" required>
+                        <label for="heslokontrola">Vložte heslo pro kontrolu</label>
+                    </div>
+                </div>
+
+                <div style="margin-top: -30px;">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-signature"
+                                        style="color: #151457;"></i></span>
+                                <div class="form-floating">
+                                    <input type="text" id="jmeno" placeholder="Vložte jméno" class="form-control" required>
+                                    <label for="jmeno">Vložte jméno</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-signature"
+                                        style="color: #14571f;"></i></span>
+                                <div class="form-floating">
+                                    <input type="text" id="prijmeni" placeholder="Vložte příjmení" class="form-control" required>
+                                    <label for="prijmeni">Vložte příjmení</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-5" style="margin-top: 20px;">
+                        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                        <div class="form-floating">
+                            <input type="email" id="email" placeholder="Vložte email" class="form-control" required>
+                            <label for="email">Vložte email</label>
+                        </div>
+                    </div>
+                    <div class="form-floating" style="margin-top: -20px;">
+                        <select class="form-select" id="stat" aria-label="Vyberte stát" required>
+                            <option value="" class="form-label" selected disabled>Vyberte stát</option>
+                            <option value="CZ">Česká republika</option>
+                            <option value="SK">Slovensko</option>
+                            <option value="DE">Německo</option>
+                            <option value="AT">Rakousko</option>
+                            <option value="PL">Polsko</option>
+                            <option value="FR">Francie</option>
+                            <option value="IT">Itálie</option>
+                            <option value="ES">Španělsko</option>
+                            <option value="US">Spojené státy</option>
+                            <option value="GB">Velká Británie</option>
+                        </select>
+                        <label for="stat"><i class="bi bi-geo-alt"></i> Stát</label>
+                    </div>
+                </div><br>
+                <input type="submit" class="form-control bg-dark" style="color: white;" value="Zaregistrovat se!">
+            </div>
+        </form>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        .carousel-caption {
+            background-color: rgba(114, 114, 114, 0.635);
+            border-radius: 10px;
+        }
+
+        .kontakt {
+            background-color: rgba(0, 0, 0, 0.207);
+            padding: 3px;
+        }
+    </style>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="onas.html">O Nás</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="prihlaseni.html">Přihlášení</a></li>
+                            <li><a class="dropdown-item" href="registrace.html">Registrace</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="h1 text-center">O Nás</h1><br>
+        <p>Vítejte na <strong>Taste the World</strong> – místě, kde se chutě stávají dobrodružstvím a každé jídlo cestou
+            kolem světa.</p>
+        <div class="row">
+            <div class="col-6">
+                <p>Naším posláním je propojit kultury skrze gastronomii a přinést vám ty nejzajímavější, nejchutnější a
+                    nejautentičtější recepty z různých koutů planety. Zaměřujeme se především na asijskou kuchyni a
+                    poklady
+                    z mořských hlubin, protože právě tyto chutě si zaslouží větší pozornost – jsou bohaté, výrazné,
+                    zdravé a
+                    často i překvapivě jednoduché na přípravu.</p>
+                <p>Za projektem Taste the World stojí tým nadšenců do vaření, cestování a objevování. Každý recept,
+                    který tu najdete, jsme pečlivě vybrali, otestovali a upravili tak, aby ho zvládl připravit i domácí
+                    kuchař bez nutnosti cestovat napříč kontinenty nebo hledat exotické suroviny celé dny. Zároveň ale
+                    ctíme autenticitu a respektujeme tradiční postupy i původní chuťové kombinace.</p>
+                <p>Chceme ukázat, že dobré jídlo není otázkou luxusu nebo vzdálené restaurace – je to něco, co si může
+                    vytvořit každý doma. A pokud vás láká ochutnat něco jiného než řízek s bramborem nebo těstoviny s
+                    kečupem, jste tu správně.</p>
+            </div>
+            <div class="col-6">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/sushi.png" class="d-block w-100" alt="Sushi">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Sushi</h5>
+                                <p>Čerstvé a autentické chutě Japonska.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/seafood.png" class="d-block w-100" alt="Mořské plody">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mořské plody</h5>
+                                <p>Ochutnej poklady oceánu.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/thai.png" class="d-block w-100" alt="Thajské jídlo">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Thajské kari</h5>
+                                <p>Pikantní dobrodružství na talíři.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Předchozí</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Další</span>
+                    </button>
+                </div>
+
+            </div>
+        </div><br>
+
+        <p><strong>🌍 Taste the World</strong> je víc než jen stránka s recepty. Je to komunita milovníků chutí, lidí
+            otevřených novým zkušenostem a kuchařů, kteří se nebojí trochu zaexperimentovat. Sdílíme tipy, triky,
+            inspiraci a příběhy, které za jídlem stojí.</p>
+        <p>Ať už chcete zvládnout dokonalé sushi, pikantní thajské curry, osvěžující vietnamskou polévku pho nebo třeba
+            křupavé krevety na asijský způsob – jsme tu pro vás.</p>
+        <h5 class="text-center" style="font-weight: bold;">Přidejte se k nám a společně ochutnejme svět. Jeden talíř po
+            druhém.</h5>
+    </div>
+
+    <div class="kontakt">
+        <div class="container mt-5">
+            <h2 class="text-center">Kontakt</h2>
+            <ul>
+                <li>Telefonní číslo: +420 123 456 789</li>
+                <li>Email: info@tastetheworld.cz</li>
+                <li>Adresa: Chuťová 3023/1, Praha 100 00</li>
+            </ul>
+
+            <h5>Pošlete nám zprávu:</h5>
+            <form action="">
+                <div class="input-group mb-5">
+                    <span class="input-group-text"><i class="fa-solid fa-inbox"></i></span>
+                    <div class="form-floating">
+                        <input type="email" id="emailzaslat" class="form-control" placeholder="Váš email" required>
+                        <label for="emailzaslat">Váš email</label>
+                    </div>
+                </div>
+                <div style="margin-top: -30px;">
+                    <label for="zprava" class="form-label">Vpište Vaši zprávu:</label>
+                    <textarea name="zprava" id="zprava"></textarea><br>
+                </div>
+                <div style="padding: 20px;">
+                    <input type="submit" class="form-control bg-dark" style="color: white; ">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        tinymce.init({
+            selector: '#zprava',
+            height: 300,
+            menubar: false,
+            branding: false,
+            resize: false,
+            plugins: 'lists link image table code',
+            toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image'
+        });
+    </script>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

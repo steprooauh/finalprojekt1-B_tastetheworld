@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        .duvod {
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.148);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="onas.html">O Nás</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item active" aria-current="page"
+                                    href="prihlaseni.html">Přihlášení</a></li>
+                            <li><a class="dropdown-item" href="registrace.html">Registrace</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <form action="">
+            <h1 class="text-center">Přihlášení do aplikace Taste the World!</h1>
+            <div class="form-floating mb-5">
+                <input type="text" id="user" placeholder="Vaše uživatelské jméno" class="form-control" required>
+                <label for="user" class="form-label">Vaše uživatelské jméno</label>
+            </div>
+            <div class="form-floating mb-5" style="margin-top: -30px;">
+                <input type="password" id="heslo" placeholder="Vaše heslo" class="form-control" required>
+                <label for="heslo" class="form-label">Vaše heslo</label>
+            </div>
+            <p class="form-label" style="font-size: small; margin-top: -35px;">Zapoměli jste heslo? <a
+                    href="zapomenute.html">Klikněte
+                    sem!</a></p>
+            <input type="submit" class="form-control bg-dark" style="color: white;" value="Přihlásit se!">
+        </form>
+
+        <div class="duvod">
+            <h2 class="mb-4"><i class="fas fa-user-plus"></i> Proč se přihlásit?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-bookmark-star"></i> Ukládej si oblíbené recepty</h5>
+                            <p class="card-text">Získáš přístup k funkci ukládání receptů, které tě zaujmou – vrátíš se
+                                k
+                                nim kdykoliv později.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-pencil-square"></i> Vytvářej vlastní recepty</h5>
+                            <p class="card-text">Přihlášení ti umožní přidávat vlastní recepty a sdílet je s komunitou
+                                dalších food nadšenců.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-chat-dots"></i> Komentuj a hodnoť</h5>
+                            <p class="card-text">Zapoj se do diskuze, sdílej dojmy a pomoz ostatním vylepšit jejich
+                                kulinářské dovednosti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="registrace.html" class="btn btn-primary btn-lg mt-3"><i class="fas fa-user-edit"></i> Registrovat
+                se</a>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>

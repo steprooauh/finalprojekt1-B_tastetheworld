@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #foodCarousel {
+            height: 100vh;
+        }
+
+        #foodCarousel .carousel-inner {
+            height: 100%;
+        }
+
+        #foodCarousel .carousel-item {
+            height: 100vh;
+            position: relative;
+        }
+
+        #foodCarousel .carousel-item img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        #foodCarousel .carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: initial;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 2.5rem;
+            font-weight: bolder;
+            font-size: 100px;
+            background-color: rgba(0, 0, 0, 0.156);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            user-select: none;
+        }
+
+        .navbar {
+            transition: top 0.3s;
+            top: -70px;
+            z-index: 1030;
+        }
+
+        .navbar.show {
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="onas.html">O Nás</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="prihlaseni.html">Přihlášení</a></li>
+                            <li><a class="dropdown-item" href="registrace.html">Registrace</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="img/ramen.png" alt="Polévka Ramen" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/sushi2.png" alt="Sushi" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/grilmaso.png" alt="Grilované maso" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/morskeplody.png" alt="Mořské plody" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/salat.png" alt="Salát" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/testoviny.png" alt="Těstoviny" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/pho.png" alt="Polévka Pho" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/ryba.png" alt="Grilovaná ryba" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/bun.png" alt="Polévka Bun bo nam Bo" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/losos.png" alt="Losos" class="d-block" />
+                <div class="carousel-caption">Taste the World</div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Předchozí</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Další</span>
+        </button>
+    </div>
+
+    <div class="container mt-5" style="padding: 20px;">
+        <h1>🍽 Taste the World – Ochutnej svět na talíři</h1>
+        <p>Vítej na stránkách Taste the World, kde každé jídlo vypráví příběh. Přinášíme ti ty nejchutnější recepty z
+            Asie a mořských oblastí, které si zamiluješ na první sousto. Objevuj nové ingredience, nauč se vařit
+            exotické pokrmy a rozšiř si kulinářské obzory – pohodlně z vlastní kuchyně.</p>
+
+        <h2>🌏 Co u nás najdeš?</h2>
+        <ul>
+            <li>Autentické recepty z Japonska, Thajska, Vietnamu, Číny a dalších koutů Asie.</li>
+            <li>Inspiraci z oceánu – od sushi přes krevety až po lahodné rybí pokrmy.</li>
+            <li>Tipy na vaření, které ti usnadní přípravu i těch nejexotičtějších jídel.</li>
+            <li>Zajímavosti z gastronomie, které ti otevřou dveře do jiných kultur.</li>
+        </ul>
+
+        <h2>🧑‍🍳 Proč právě Taste the World?</h2>
+        <p>Protože věříme, že jídlo spojuje lidi. A že každý má právo ochutnat svět – i bez cestování. Naše recepty jsou
+            srozumitelné, chutné a dostupné. Ať už jsi začátečník nebo zkušený kuchař, u nás si najdeš to své.</p>
+
+        <h2>🔥 Začni vařit hned teď</h2>
+        <p>Prohlédni si naše nejnovější recepty, inspiruj se oblíbenými pokrmy a vydej se na cestu chutí. Třeba zjistíš,
+            že tvoje nové oblíbené jídlo pochází z druhého konce světa.</p>
+
+        <p>
+            <a href="prihlaseni.html" class="btn btn-primary me-2">🔎 Prozkoumat recepty</a>
+            <a href="onas.html" class="btn btn-outline-secondary me-2">📖 O nás & Kontakt</a>
+        </p>
+    </div>
+
+    <script>
+        //Toto je script, aby se neobjevil navbar hnedka co otevřu stránku, ale po té, co sjedu lehce dolů.
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 50) {
+                // scroll dolů a překročeno 50px - zobraz navbar
+                navbar.classList.add('show');
+            } else if (scrollTop < lastScrollTop) {
+                // scroll nahoru - schovej navbar
+                navbar.classList.remove('show');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // pro Mobile nebo záporný scroll
+        });
+
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>
