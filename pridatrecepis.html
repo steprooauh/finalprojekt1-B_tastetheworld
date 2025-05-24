@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <style>
+        .fotky{
+            background-color: rgba(0, 0, 0, 0.127);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="margin-top: 30px;">Přidat recept</h2>
+        <p>Vyplňte jednoduchý formulář a zašlete ho našemu týmu. My ho zhodnotíme a přidáme k dalším, samozřejmě Vás
+            nezapomeneme označit.</p>
+        <form action="">
+            <div class="row">
+                <div class="col-6">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-file-signature"></i></span>
+                        <div class="form-floating">
+                            <input type="text" id="user" class="form-control" placeholder="Vaše uživatelské jméno"
+                                required>
+                            <label for="user">Vaše uživatelské jméno</label>
+                        </div>
+                    </div><br>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-earth-europe"></i></span>
+                        <div class="form-floating">
+                            <input type="text" id="stat" class="form-control" placeholder="Původ recepisu" required>
+                            <label for="stat">Původ recepisu</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-bowl-food"></i></span>
+                        <div class="form-floating">
+                            <input type="text" id="nazev" class="form-control" placeholder="Název receptu" required>
+                            <label for="nazev">Název receptu</label>
+                        </div>
+                    </div><br>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
+                        <div class="form-floating">
+                            <input type="text" id="datum" class="form-control" placeholder="Datum poslání" required>
+                            <label for="datum">Datum poslání</label>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-6">
+                    <textarea id="popisrecepisu"></textarea>
+                </div>
+                <div class="col-6 fotky">
+                    <h5 style="margin-top: 30px;">Vložte fotografie</h5>
+                    <p style="font-size: small;">První fotografie je povinná</p>
+                    <input type="file" id="fotka" accept=".jpg, .png, .webp" required><br><br>
+                    <input type="file" id="fotka" accept=".jpg, .png, .webp"><br><br>
+                    <input type="file" id="fotka" accept=".jpg, .png, .webp"><br><br>
+                    <input type="file" id="fotka" accept=".jpg, .png, .webp"><br><br>
+                </div>
+            </div>
+            <button class="form-control bg-dark" style="color: white;" type="submit"><strong><i
+                        class="fa-solid fa-paper-plane"></i> Odeslat</strong></button>
+        </form>
+    </div>
+
+    <script>
+        tinymce.init({
+            selector: '#popisrecepisu',
+            branding: false,
+            toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image'
+        });
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

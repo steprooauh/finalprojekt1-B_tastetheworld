@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <style>
+        .karta img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .karta {
+            margin-bottom: 20px;
+        }
+
+        .aktivni {
+            display: block;
+        }
+
+        .neaktivni {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><br>
+
+    <div class="p-5">
+
+        <div class="container">
+            <h1 class="mb-4">Vítejte na stránce s recepty!</h1>
+            <p>Tady najdete chutné recepty z různých koutů světa. Přidejte vlastní nebo se inspirujte!</p>
+
+            <a href="pridatrecepis.html" class="btn btn-primary my-3">Přidat recept</a>
+
+
+            <ul class="nav nav-tabs mt-4" id="tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#receptyTab">Recepty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#tipyTab">Tipy</a>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="receptyTab">
+                    <div id="stranka1" class="aktivni">
+                        <div class="row">
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://static.toprecepty.cz/fotky/recepty/0131/pad-thai-thajske-narodni-jidlo-199110-1920-1080-nwo.webp"
+                                        class="card-img-top" alt="Recept 1" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pad Thai</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Thajsko <span
+                                                class="fi fi-th"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://www.toprecepty.cz/recept/59200-pad-thai-thajske-narodni-jidlo/"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://static.toprecepty.cz/fotky/recepty/0034/peruanske-ceviche-88990-670-377-nw.webp"
+                                        class="card-img-top" alt="Recept 2" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Peruánské ceviche</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Peru <span class="fi fi-pe"></span>
+                                        </p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://www.toprecepty.cz/recept/15496-peruanske-ceviche/"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://cdn.administrace.tv/2022/08/06/hd_169/6d36286b41d64ecc3516e3725f518b96.jpg"
+                                        class="card-img-top" alt="Recept 3" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Jollof rice</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Nigerie <span
+                                                class="fi fi-ne"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://fresh.iprima.cz/jollof-ryze" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://cdn.administrace.tv/2022/11/12/hd_169/fa63aff7e6d48706040a12cdcec4664b.jpg"
+                                        class="card-img-top" alt="Recept 4" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Biryani</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Indie <span
+                                                class="fi fi-in"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Těžká</p>
+                                        <a href="https://fresh.iprima.cz/indicka-ryze-biryani-s-kurecim-masem-192882"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://cdn.administrace.tv/2022/08/06/hd_169/3f1291939feeb3ddee457caa58691dcc.jpg"
+                                        class="card-img-top" alt="Recept 5" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bibimbap</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Jižní Korea <span
+                                                class="fi fi-kr"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://fresh.iprima.cz/recepty/hvezda-korejske-kuchyne-bibimbap"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://cdn.administrace.tv/2022/08/06/hd_169/78234d2ff6abd3d7012142a51faa9d45.jpg"
+                                        class="card-img-top" alt="Recept 6" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fejioada</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Brazílie <span
+                                                class="fi fi-br"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://fresh.iprima.cz/recepty/brazilska-feijoada" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://www.recepty247.cz/wp-content/uploads/2023/12/13597-kureci-tajine-se-susenymi-merunkami.jpg"
+                                        class="card-img-top" alt="Recept 7" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tagine s sušenými meruňkami</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Maroko <span
+                                                class="fi fi-ma"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Těžká</p>
+                                        <a href="https://www.recepty247.cz/kureci-tajine-se-susenymi-merunkami/"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://cdn.administrace.tv/2022/08/07/hd_169/bcfba5850ff28464fbeadb35c84734a2.jpg"
+                                        class="card-img-top" alt="Recept 8" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Poke Bowl</h5>
+                                        <p class="card-text"><strong>Původ:</strong> USA <span class="fi fi-us"></span>
+                                        </p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://fresh.iprima.cz/recepty/havajske-poke-bowl-s-lososem"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTScvxfAQR_XgKDY2cV_NuOkKz8pg423hNuoQ&s"
+                                        class="card-img-top" alt="Recept 9" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Satay</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Indonézie <span
+                                                class="fi fi-id"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="#" target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="stranka2" class="neaktivni">
+                        <div class="row">
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://1gr.cz/fotky/idnes/23/023/r7/JVE86dc67_9424_100293896.jpg"
+                                        class="card-img-top" alt="Recept 10" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chiles en Nogada</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Mexiko <span
+                                                class="fi fi-mx"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Těžké</p>
+                                        <a href="https://www.receptyonline.cz/recept/jidlo/chiles-en-nogada/"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://www.recipetineats.com/tachyon/2020/07/Laksa_1-SQ.jpg?resize=500%2C375"
+                                        class="card-img-top" alt="Recept 11" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Laksa</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Malajsie <span
+                                                class="fi fi-my"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://fresh.iprima.cz/prostreno/laksa-0" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0gf_NswXQWDIBGi1fqZUMv-BbWEdDIes5qA&s"
+                                        class="card-img-top" alt="Recept 12" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Couscous</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Tunisko <span
+                                                class="fi fi-tn"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://www.toprecepty.cz/clanky/1740-autenticka-chut-afriky-uvarte-si-pravy-tunisky-kuskus-podle-tradicniho-receptu/"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://www.recipetineats.com/tachyon/2019/03/Greek-Moussaka_3-re-edited-SQ.jpg?resize=500%2C375"
+                                        class="card-img-top" alt="Recept 13" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Moussaka</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Řecko <span
+                                                class="fi fi-gr"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://www.rohlik.cz/en-CZ/chef/757-musaka" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdEofwGQ0pC2hdwWsIL7FxFW6hjrdGs8h-dg&s"
+                                        class="card-img-top" alt="Recept 14" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pho</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Vientam <span
+                                                class="fi fi-vn"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Těžká</p>
+                                        <a href="https://www.apetitonline.cz/recept/vietnamska-polevka-pho-bo"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_dZh_1CIHOK6Omk_q74FLh-wllBH-yD6nw&s"
+                                        class="card-img-top" alt="Recept 15" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Khachapuri</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Gruzie <span
+                                                class="fi fi-ge"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://ochutnejtesvet.cz/gruzinske-chacapuri/" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQfHIn1edVAZ4t76Y_XOE6jwqoa7jVyki-cWOS52qIDponT_Uqz0fH_-5st7qOJUsVFwOzgwJrZ-5MxaXERiM-2O7X9eyHoL64VK9A7fHg"
+                                        class="card-img-top" alt="Recept 16" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Balut</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Filipíny <span
+                                                class="fi fi-ph"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Lehká</p>
+                                        <a href="https://www.apetitonline.cz/zajimavosti/balut-gurmanska-pochoutka-nebo-nejhorsi-jidlo-na-svete"
+                                            target="_blank" class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPn13ykKknl2RIPyb9tcDjaruaehMKBqG4gFfP_-ObWxGIJyviacgQaQo5_KMHNe523iRy3o33i1xgCanIuGrfTUhgpTzTe6YoJmLNmEoCNg"
+                                        class="card-img-top" alt="Recept 17" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bulgogi</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Jižní Korea <span
+                                                class="fi fi-kr"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://aktin.cz/korejske-hovezi-bulgogi-s-ryzi" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 karta">
+                                <div class="card">
+                                    <img src="data:image/webp;base64,UklGRrYQAABXRUJQVlA4IKoQAACQSQCdASq5AHcAPuE8uFwopqioldEQHAlAGCpO+7vY+otmIgrZtb6H17+iuehfftP7Of9V4CzGsAfetzpPsRjRPGf8nlO/avUR6W6R9c46cD1LQI+IfVDE/AYAxRa9ZIBR8f89JrLkK90/v92YBkYCbocHTg0wbT/XcKusodCuSl3X+M5jItLjWwL+fSUEbcCh3ybzgRH5mGhj7wn4sn1GAnXAfVgKlBERTdI184mGo9rJCOQDnJqmURUX8BEVK5eTlAtmOCyR/3kjtGs36TSOI8dJ003pzw/yX11X/p23XOpEuYRJ4kw4Ytz7eVin/8ww9ROhHwFekRg8q4EprWJuJkUPhXVluvyJ2aX4pRAwFnUTuGg2xbTq9hgB39B4vhlCu+I+zNt7S6dpyrD25iveowne0FVNu9W+2YJldWGd0NOZ80jb5MvUuNV+8NVr4SxiGL1pS4DpUk3G59SAsmuqiIpPb/P29Sk+/Qgi59L2Nlfl8OS67THcdjd8H5cbv2Gb/5JKmQnRtc9ynP0h9LdrKkPQMFnKiDa03zM8ynphBh53RCYPMR/UXzfhq1aYG2qW7hzuQGOiT1/509vY1CYIFu9E6kZJGzj/0nN8jYKmjgvo3FGcZWhjHsUc4F/1E6FoLjoXpmzmLqLhgCl3q1hqf0p+WkARgOX8/WqCMnbs8q8fEZ9bIW3zDKeImS36iVb13DrVYaYjmSWKUXOJ9x5LoSOmtFhGPpF6Lzopy12T981Wsb5iSwKiJicjb0IUA6hRM/+cfVFDOAJ7d+srtyEabc/StKQA/uM4VTuvsUM64ZO6Zu+D6+xRiKU+pVvV91/WtBP4qstARupBNigYnqgeifRUdx5hK95UA69UyKVzTaZSf8S8k3J5XQxWRuHAU6p8hKJT0upxUB+3lbuHyWV+ERcyKLCzoP67yuviN6ruULeZu2iF2Z83s2XV8OPefaC+nOhN61aaI3WsjdexgEU40cxAWt4dxWOs8NZx2UrWjG7dBy58urlsvrmyGgoAX19YwChU9T1TaX0b4MYR5iqm6Bxtt2vmcSuIcQN9ySCLFUaCeye84IQQQZfwGSDSYgbRTlTBacG91wWypwA0JqDqiYEEGnIuAxLJ8OhrPeB8QnjOUrGbEJEC/aSeTByoA2EDkvGZwTG9oupI4z+KfOq9mKBwJt9fWeQcp2FiNIXF0m3ogBlyreUgU3XXAJaDrZttPI+QisTgCi23qw67IuZEUX3PZujNFMLs8v+IS4Qxf2aQVaZNW9eK03YRUdlRAr5pmTrzcaAUyXmH9HzqjmIXXwY0cpDUACYpqfpN2PpQ4ae2cH7Xh5RBrFc3BMtUWGLWpvOPF/TR/9QGSyD+4ILTpFn+CEZAmCtHjNvYcHI4dac5BA4L1saTAL4Fwol3jySDoOhJf4oQHqL5BSHVlo1WleLjilQ+Nny1dPol1O8p63LoHutkUf0K1crct3zMdLEjMRhf1fVbdtof8T2WiLTThDhJ21xvFK7PsalvlTXbYIF/Ajp1cW8bWSaY6Gvrba8bbkjxILBUTRhR6cdpD/T77OO6AArN3YrThFxXSOgqht9MI+JpBJ6or5Kiwhver66syVDQU+m+LXWqYQ/noF8JFtXbTXEpsF1Sfr+o3LkYnhbOjlvDV+Bw33TzyRn2mKl8IX8z0dk2igzWjsfL2rEqPQ99Hrq5LJrCyEHYqOpoOH9D9oUZjPDwpZxIqACUVG0H5wMOJQZ4k0dfd4SmE15Z5a31P7p/FGzOu469kFb4QV9ZiCN7y2Jnjm5FMgvD3PZgbNHJP1x8oq1bPTXR7iZjy0q+0tu/VewLVrWfKtI8aZ9FW+xFU/0H6ORczpuDs1Ktk1wA7SOfNRibvOcmHa6SwUwkMMVfvKwB+zmBlHupRW/CFTFUuiwBuPJ7NV6vCsjtFJYM8Z6DBkF/eK1GQagUWHjFHnDav4LR6Sntu4xROeUptrZOH613HPlNZ8ICzbCuFgBvly/Xj0NEiWvSdv1NqYCXq9cm2Zy1zprY3SGLYMMv7V9hTdrEpw7hU1bMnoHcblzuhsQ9PHPD/NuOddMqsu086bZodZoQqL4ol8/qT06BHmtA0bHQHkm9R8Ga5jEId3ZYrS9jH6p3jQYxxJbaY7jKeppRBn2aqhSd3ZYhkNx501qWgJzq4vHsnMoXJqcVTXXpT+N3DpAc39kymV1I24Y50e3ZjIW52ZU2JjZ8SNRf+eIuqBxHV8i/l9RDGlUU+mLpih7yko6qoYONAXKUhb60ScSU3hpk0f794tAx5RzJw3jGvvbz5q03FkjhZR/AYz6RddkSdKsiCsfmUnwp5ef1sUOJrLHU7ivhAWFEMkzwTwrqVffojchopMP1x8JrSrIsUm0YnXdc5PwxYWajeHrXgSojjirSo8hl69rACekEXkVMKlx0i+1LcQI3Hd3ZWtl3o+5ptXtbT7VurPGe70HWKPXWfonjDPf/hAR6XXIScbsN/+GI471dcjhgBYLK2ww/KnjcUEIPQB5JhtNR6YR+h4Rvl+Qyo++8+ETyi41aoJX3LDvVobQkYqpJb+JBTwswUNNM0V6dLDjGgM/VnkKRhn0f2IC9Ua26DmXHLlXP6AjflcbBwUDhQAglWANiIiGXHvBM663hPDN2QxsKv1MrBIylBkJvDW/UO8qmf/MpoQRTwKndqs8ZtqsQsmjS0nIdi0Dn55CEZM7Wn7wXfIM2rp5QqnyeHVyeu0dNi4L1ppvz2iGlhA7Hk0kmXLTb1hWnOgSTY/EM663i5WFlUlTpSEYukrc9yr/rRRfo44r77NL4vrGNNQeeK7vGFJJyBoY8yA4OAZAxFiE2YuRI8cWJArGhz3suhWVL+MNbekfCWj6rjcAhM3iCOU9VHyI842+ZQq649O4H1HlUUXptEJIF6j4q3XsnTLNAIrdsAdb6sKsCd02nlm2mxNr8CMjwKdfFwS8h7cMVadsHfFqN8Ds2Ip3ugKvPFbBpducQfWteWllyVdmisqJmhpFrd8Y7Zv1KEcJq/cFAxKktFVzU8w2t8JbbPEacrCSPGzkwPUdGquV2O6ys5AB+LYoCyns3gIws91Me47AJiAaA3RoiayXXwDHD2reW1SP4PeuNAU7w982jz3EVLud+B8FZyi55Vz+2sQZLg/CIoI2BUbGcqosdOg42TALe2QDkJWI39bOMPdEkPhu32bXf56z/Hn8wGPWnQss9k+TzAEzpQ7BarE6O/HhDZN4ZBH3FHj3SUOF++ovFwdcD1M6oxGFOWhwTVdz1Q4UaUudg7q+EBhEqY9GPcPeoLal93wVb+oWLSvbhzhaC5xf8cXm8y8DCUxcbSn/5mtj21289lhJcM92HVF++A8RcxZU7heC7sj7cu0XRIkEeIkMB78zbmFO3BUFhwLZ9vObJoBbYr7OCowLngmO42MeqOwH2WM4QqV7ysBeNKVcfwNNxeVKmODl8Y/3Zdlkyc8NaOCdfvnlZD+J9LceWMsEYoNfE8sPZy3mNwKpKK4+rKrjqhxtO6VU3rQsXkgub+0LFmkVhoeqxjWCXtoe1lSDUQVRgNd9P/sABwvvTUKh4nte6VQ6ZR4Yvn1RL5HL6loo8MQwnFTyGiCP0raurKiKl2qoE5WBAiF8yqZdo3QrAjItMu655xlxdJ1+GkTsZB/04SDcjgT0/mOSBqcTio5Wdl0/VLAUwz3mEzmgTbOc6UFxUf6ufr7n/7i7g8m9/xbUw/llgi9I13/hdpS9atUdCr/dNQfzbxj5ZlqvevGSp85f6MKXBErKZSHk9lbBSPsgmRs3amPqTNchgS69PHIQsU/g8wF/wwBrkDHLewMbTGDfHuFzrAOL1kiaaFvfoISmH3FmuR+rUfRxGkqTn1x6at6PVkMMHcvhwRD/qFEdzyMVy5Ph2HdOx9XUa7ZndXVNkedGi4/72LuqU7TTncD6a+R1n1++2CnbAznHO7URR9AhnTONGel+NnaG8Yo1IDQzsz4EMdU1pRbwd/heQMW4XPDeWrMM+lnr1HZ09R8gbADADwpCuLopuYPnJzXAD6tUmPtQ6YxdyCF7CaQUVXM6yog2K0iwMfvhk5I9S8003vt4E0/jSnx1fAPCEjmPDVm4cCq/9Vmevjk1xWfB+7YcIJs375/s7RYo0wM+uKsqd6QEggdb1nzFS4afZ8r/UGFTwctZbu3qpIo/nOWId5EbfaGle+71pvVAX1L3y9lanFc8ZT+L8xQA8WgG1CI5NzUSYN6l8C++dPXAoNPPH4vQGydyxV4cyLItpKKpchFSKI+cz7tsKcuzRiX4SgygJ3UCYbxJnBs/pMg76/6aZpBKlYQfQJuN+1AJxLoCEMPqoSz4g8c1NI3tcM+qDFJovFZ56r47l6xuLPla+O4cbKdO4y134WhowFV9/Sz2gPH04MPhKNqF7wFNWKJv5bzoHL6cgKTUsrTpv2ERA7Xfq6Ogbzx009YkpRprrVrHA2K4JgiE6+Kf90i4vPXNGc6AkcsOJLs36UIP2xG6x0mkG0rkfSTIT4eGhum94whYpKeTy+5gkzBBTm6Hdjgz1lqCi3gJTYJOGK0ANq+EpqPxi6Hd8Jh/IXZvsAV9t4egcGaOYe6CtHhT51YygB8rL8TeJKFUovouexibyVJLJWMb3w3x/BOiBeRPetoI7hSc1EfGJvckL7J/wwuCxooudkjAfdladA5LWddZBmjtSrSt60oeydwrxPL+cVWWd5t9hiMeZnfktHe+oSwGiQM/USKXroQuFZX9pQct923X0epEO7WLYmai5oRni1m4Ib9SBK7865/9w630TwGCtDlewrpPxMl9kNMyDLrznWYAjgTdo2/EVZUdFJX/dzNovR5i7RXJ+t5diNAwvLotxHlY1QrgM9aGos6woNLsyxJrumEd/Q8wG+0LBCu404p6j3v3WJ20A0NrdMMTXBDDNnVWTOFAmgGaQRlPJ5nxRQdGD3L6BG07frXvgP+2gNK7Ry+Y1wlUMz8xhzL9hu/nPY3OAA0qooneoXl+XQK80PvQfrh0lrne7+dC2yg2Xyt5Ty0DiNtxv0bcXZiKjeCPdCfrrv6bhcfuuObsoM52wbOfAqjnmgFUSPd9VwcYPWjugerUzDleI00zGGe0biL0DPgAX1+D11W7Zv+/r6eQY96hTWsr7K6HCStAKwp5kE6zSuIHff36ZepE4BSjnkA93hHpjzWBEPIVw+AIr/qaau5dACazA9VJtMX5MwFLtPL1bo/aA2/z9FG47cRtm81NzJmQGVkGybrPioYeAdzv+/6cA1A07HtXMj4I+ucXwJzWqZ3hbcUHGo/27Au7ezphNyqX965pBXABVUnhWI0QupsU36sKGxzOsQSA/v81TTq/isiT8NgqycEHMJ97Dgfcf56j9gDZNDo6YPhl7LGSdUV0bPzvOOEbKuwP1DfnBo42KVxQViqP3jELnZPh4UAa0PDZ7BuAjN+4C4xhvp3lcA+JFnwB10kFihqpRUymjO/hDwRaFthL3J+AuLrnpL8lOve2jc6K716GSe4kUwIq//the4N4Vj0n4Jpvb15q5/w0q9MSskLPuLxvdi6o5clzJLqS5fW7FbmUf0OLLyisy7xZ2pb80LvDAmr2mfIL2lPjP14uEGCETXyI2yLLC85LSB6tgDBpOCcmf67Io7fe+mfnOsRNWkmXdMXb1M+rdaWZ5bwvQrwjTWjYAAAA="
+                                        class="card-img-top" alt="Recept 18" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pastilla</h5>
+                                        <p class="card-text"><strong>Původ:</strong> Maroko <span
+                                                class="fi fi-ma"></span></p>
+                                        <p class="card-text"><strong>Náročnost:</strong> Střední</p>
+                                        <a href="https://www.tabetai.cz/pastilla" target="_blank"
+                                            class="btn btn-outline-primary">Zobrazit recept</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-secondary" id="nacistBtn">Načíst další</button>
+                        <button class="btn btn-secondary d-none" id="zpetBtn">Načíst zpět</button>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tipyTab">
+                    <div class="accordion" id="vareniTips">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1">
+                                    1. Předehřej troubu správně
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Trouba potřebuje čas, aby se rovnoměrně zahřála. Předehřátí zaručí správné výsledky
+                                    pečení.<br>
+                                    <strong>Zdroj:</strong> domacikucharka.cz
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2">
+                                    2. Používej ostrý nůž
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Ostrý nůž je bezpečnější než tupý – méně klouže a snadněji řeže.<br>
+                                    <strong>Zdroj:</strong> kuchynesnadno.cz
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3">
+                                    3. Nechte maso odpočinout
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Po upečení maso nechte několik minut odpočinout, aby šťáva zůstala uvnitř.<br>
+                                    <strong>Zdroj:</strong> receptynaprani.cz
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4">
+                                    4. Používej čerstvé bylinky
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Čerstvé bylinky dodají pokrmům výraznější chuť než sušené.<br>
+                                    <strong>Zdroj:</strong> varimezive.cz
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5">
+                                    5. Nesol hned
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Některé suroviny pouští vodu – sůl přidávej až později pro lepší výsledek.<br>
+                                    <strong>Zdroj:</strong> kucharskatipy.cz
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading20">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse20">
+                                    6. Nauč se správně míchat omáčky
+                                </button>
+                            </h2>
+                            <div id="collapse20" class="accordion-collapse collapse" data-bs-parent="#vareniTips">
+                                <div class="accordion-body">
+                                    Nezastavuj míchání bešamelu nebo holandské omáčky, jinak se srazí.<br>
+                                    <strong>Zdroj:</strong> tipyodkuchare.cz
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-secondary" disabled>Načíst další</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const nacistBtn = document.getElementById("nacistBtn");
+            const zpetBtn = document.getElementById("zpetBtn");
+            const stranka1 = document.getElementById("stranka1");
+            const stranka2 = document.getElementById("stranka2");
+
+            nacistBtn.addEventListener("click", () => {
+                stranka1.classList.remove("aktivni");
+                stranka1.classList.add("neaktivni");
+                stranka2.classList.remove("neaktivni");
+                stranka2.classList.add("aktivni");
+                nacistBtn.classList.add("d-none");
+                zpetBtn.classList.remove("d-none");
+
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            zpetBtn.addEventListener("click", () => {
+                stranka2.classList.remove("aktivni");
+                stranka2.classList.add("neaktivni");
+                stranka1.classList.remove("neaktivni");
+                stranka1.classList.add("aktivni");
+                zpetBtn.classList.add("d-none");
+                nacistBtn.classList.remove("d-none");
+
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        </script>
+
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>
