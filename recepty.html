@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -62,7 +62,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
                             <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -76,7 +76,7 @@
 
     <div class="p-5">
 
-        <div class="container">
+        <div class="container" style="padding-top: 30px;">
             <h1 class="mb-4">Vítejte na stránce s recepty!</h1>
             <p>Tady najdete chutné recepty z různých koutů světa. Přidejte vlastní nebo se inspirujte!</p>
 
@@ -514,6 +514,39 @@
         </script>
 
     </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <h5>Kontakt</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Telefon:</strong> +420 123 456 789</li>
+                            <li><strong>Email:</strong> <a href="mailto:info@tastetheworld.cz"
+                                    class="text-light">info@tastetheworld.cz</a></li>
+                            <li><strong>Adresa:</strong> Chuťová 3023/1, Praha 100 00</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 mb-3 text-md-end">
+                        <h5>Autor</h5>
+                        <p>
+                            <a href="https://www.facebook.com/stepa.prokop/" target="_blank"
+                                class="text-light text-decoration-underline">
+                                Štěpán Prokop, OAUH
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="border-light">
+
+                <div class="text-center">
+                    <small>&copy; 2025 Taste The World – Všechna práva vyhrazena</small>
+                </div>
+            </div>
+        </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/tinymce/tinymce.min.js"></script>
 </body>

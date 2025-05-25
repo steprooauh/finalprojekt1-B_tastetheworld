@@ -87,6 +87,20 @@
                 height: 3px;
             }
         }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
     </style>
 </head>
 
@@ -120,7 +134,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
                             <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -133,49 +147,90 @@
     </nav>
 
 
-    <div class="container mt-5">
+    <main class="container mt-5">
         <h2 class="text-center mb-5">Progres vývoje stránky</h2>
 
-        <div class="timeline position-relative">
-            <div class="progress-bar-bg"></div>
-            <div class="progress-bar-fill" id="progressFill"></div>
-
-            <div class="timeline-step" data-step="1" title="12:00 – Výběr tématu">1</div>
-            <div class="timeline-step" data-step="2" title="13:30 – Začátek HTML">2</div>
-            <div class="timeline-step" data-step="3" title="Večer – Úvodní stránka hotová">3</div>
-            <div class="timeline-step" data-step="4" title="Lorem ipsum 1">4</div>
-            <div class="timeline-step" data-step="5" title="Lorem ipsum 2">5</div>
-            <div class="timeline-step" data-step="6" title="Lorem ipsum 3">6</div>
+        <div class="progress mb-4" style="height: 30px;">
+            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                0%
+            </div>
         </div>
 
-        <div id="stepInfo" class="info"></div>
-    </div>
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+            <button class="btn btn-outline-primary" data-step="1">Krok 1</button>
+            <button class="btn btn-outline-primary" data-step="2">Krok 2</button>
+            <button class="btn btn-outline-primary" data-step="3">Krok 3</button>
+            <button class="btn btn-outline-primary" data-step="4">Krok 4</button>
+            <button class="btn btn-outline-primary" data-step="5">Krok 5</button>
+            <button class="btn btn-outline-primary" data-step="6">Krok 6</button>
+        </div>
+
+        <div id="stepInfo" class="alert alert-info d-none"></div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Telefon:</strong> +420 123 456 789</li>
+                        <li><strong>Email:</strong> <a href="mailto:info@tastetheworld.cz"
+                                class="text-light">info@tastetheworld.cz</a></li>
+                        <li><strong>Adresa:</strong> Chuťová 3023/1, Praha 100 00</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-3 text-md-end">
+                    <h5>Autor</h5>
+                    <p>
+                        <a href="https://www.facebook.com/stepa.prokop/" target="_blank"
+                            class="text-light text-decoration-underline">
+                            Štěpán Prokop, OAUH
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center">
+                <small>&copy; 2025 Taste The World – Všechna práva vyhrazena</small>
+            </div>
+        </div>
+    </footer>
+
 
     <script>
-        const steps = document.querySelectorAll('.timeline-step');
-        const progressFill = document.getElementById('progressFill');
+        const buttons = document.querySelectorAll('button[data-step]');
+        const progressBar = document.getElementById('progressBar');
         const infoBox = document.getElementById('stepInfo');
 
         const messages = {
             1: "📌 24.5. ve 12:00 – Vybral jsem si nápad stránky a rozhodl, o čem bude.",
             2: "🕐 24.5. ve 13:30 – Začal jsem tvořit HTML strukturu stránky.",
             3: "🌙 24.5. večer – Dokončil jsem úvodní stránku a pustil se do aplikace.",
-            4: "🚧 Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            5: "🛠️ Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            6: "📈 Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            4: "🚧 25.5. ráno – Začal jsem dělat responzivitu, ale zbývalo mi ještě dodělat aplikaci.",
+            5: "🛠️ 25.5 odpoledne - Už jsem měl aplikaci hotovou, přidal jsem footer a doladil ještě pár věcí. Nahrál aplikaci na server.",
+            6: "📈 Dosud - Aplikace zatím hotová"
         };
 
-        steps.forEach(step => {
-            step.addEventListener('click', () => {
-                const stepNum = parseInt(step.dataset.step);
-                const progress = ((stepNum - 1) / (steps.length - 1)) * 100;
-                progressFill.style.width = progress + "%";
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const stepNum = parseInt(button.dataset.step);
+                const progress = ((stepNum - 1) / (buttons.length - 1)) * 100;
+                progressBar.style.width = progress + "%";
+                progressBar.setAttribute("aria-valuenow", progress);
+                progressBar.textContent = Math.round(progress) + "%";
 
-                infoBox.style.display = 'block';
-                infoBox.innerText = messages[stepNum];
+                infoBox.classList.remove("d-none");
+                infoBox.textContent = messages[stepNum];
             });
         });
     </script>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/tinymce/tinymce.min.js"></script>
 </body>

@@ -9,10 +9,29 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="icon" href="img/head.png" type="image/png">
+    <style>
+        .rounded-circle {
+            border: 2px solid black;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,7 +60,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
                             <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                            <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -53,6 +72,444 @@
         </div>
     </nav>
 
+    <main class="container" style="margin-top: 100px;">
+        <h1 class="text-center">Objevujte</h1>
+        <p>Objevujte ve světě gastronomie a jídla nezapomenutelné chutě, které vás přenesou do různých koutů světa bez
+            nutnosti opustit vaši kuchyni.</p>
+        <form id="vyhledavaniForm">
+            <div class="input-group mb-5">
+                <div class="form-floating flex-grow-1">
+                    <input type="text" id="vyhledat" class="form-control" placeholder="Vyhledat">
+                    <label for="vyhledat">Vyhledat</label>
+                </div>
+                <button class="btn btn-dark" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+
+        <div id="vysledky" class="mb-4"></div>
+
+
+        <div id="puvodniObsah">
+            <div class="recepty">
+                <div class="recept" data-klicova-slova="pizza italie sýr" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://freestylepizza.cz/wp-content/uploads/2019/01/Hotov%C3%A1-pizza-300x300.jpg"
+                            alt="Italská pizza"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://freestylepizza.cz/prava-italska-pizza-pro-kazdeho/"
+                                    target="_blank">Italská
+                                    pizza</a></h4>
+                            <p>Klasická pizza se sýrem a rajčaty.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="sushi japonsko ryba" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://www.susi.cz/uploads/recipeentity/5/fileimage/86110cefb14b0681e0b12823eb0888084295750d.jpg"
+                            alt="Sushi" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://www.susi.cz/recept/maki-sushi/" target="_blank">Sushi</a></h4>
+                            <p>Tradiční japonské jídlo z rýže a syrové ryby.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="guláš česko maso" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/06/hd/0164fb8f7a89180bda88369f9e4e67a5.jpg"
+                            alt="Hovězí guláš"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/recepty/hovezi-gulas-0" target="_blank">Hovězí
+                                    guláš</a>
+                            </h4>
+                            <p>Česká klasika plná chuti a vůně.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="tacos mexiko hovězí" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://www.apetitonline.cz/sites/default/files/styles/apetit_article_landscape_large_2x/public/rybi_tacos_0.jpg?h=43fe8092"
+                            alt="Mexické tacos"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://www.apetitonline.cz/menu/tacos-krok-za-krokem-jednoduche-mexicke-jidlo-ktere-ma-mnoho-obmen"
+                                    target="_blank">Mexické tacos</a></h4>
+                            <p>Chutné mexické tacos s mletým masem a zeleninou.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="curry indie kuře" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/07/hd_169/c36d9dfc5702d19246668866aede8200.jpg"
+                            alt="Kuřecí curry"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/recepty/rychla-vecere-bleskove-20minutove-kureci-kari"
+                                    target="_blank">Kuřecí curry</a></h4>
+                            <p>Indické kuřecí kari plné exotických chutí a koření.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="pho vietnam nudle vývar" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://www.apetitonline.cz/sites/default/files/styles/apetit_article_landscape_large_2x/public/recepty/Vietnamska_polevka_pho_2012_3.jpg?h=5e15ddf4"
+                            alt="Pho" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://www.apetitonline.cz/recept/vietnamska-polevka-pho-bo"
+                                    target="_blank">Pho</a>
+                            </h4>
+                            <p>Vietnamská nudlová polévka s bylinkami a hovězím vývarem.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="paella španělsko mořské plody" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/06/hd/29ba512efe8884545d8315a88542eeba.jpg"
+                            alt="Paella" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/tradicni-paella-0" target="_blank">Paella</a></h4>
+                            <p>Tradiční španělské jídlo s rýží a mořskými plody.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="hamburger amerika hovězí" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://www.apetitonline.cz/sites/default/files/styles/apetit_article_landscape_large_2x/public/bez-nazvu-3_0.jpg?h=c65c25bf"
+                            alt="Domácí hamburger"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://www.apetitonline.cz/recept/dokonaly-domaci-hamburger"
+                                    target="_blank">Domácí
+                                    hamburger</a></h4>
+                            <p>Šťavnatý hamburger s hovězím masem a čerstvou zeleninou.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="ratatouille francie zelenina" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/06/hd/d4836f145b5e431cd9209a65eda06a9e.jpg"
+                            alt="Ratatouille" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/prave-francouzske-ratatouille"
+                                    target="_blank">Ratatouille</a>
+                            </h4>
+                            <p>Francouzský zeleninový pokrm z lilku, cukety a rajčat.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="ramen japonsko nudle vývar" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/07/hd_169/1504c05c8ac8430b3b52ebcef7a4105b.jpg"
+                            alt="Ramen" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/recepty/prekvapive-uchvatny-hodinovy-ostry-miso-ramen"
+                                    target="_blank">Ramen</a></h4>
+                            <p>Japonská nudlová polévka s bohatým vývarem a přílohami.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="lasagne italie těstoviny" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/07/hd_169/2de675109cb7f3955c5251f9ccada444.jpg"
+                            alt="Lasagne" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/recepty/perfektni-recept-na-zapecene-lasagne-s-mletym-masem"
+                                    target="_blank">Lasagne</a></h4>
+                            <p>Italské vrstvené těstoviny se sýrem, masem a rajčaty.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="falafel vegetarián blízký východ" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn.administrace.tv/2022/08/07/hd_169/4be00156202cb498d5c838a9202b42bc.jpg"
+                            alt="Falafel" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://fresh.iprima.cz/recepty/originalni-recept-na-falafel-z-cizrny"
+                                    target="_blank">Falafel</a></h4>
+                            <p>Kuličky z cizrny oblíbené v arabské kuchyni.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="knedlo vepřo zelo česko tradiční" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://www.apetitonline.cz/sites/default/files/styles/apetit_article_landscape_large_2x/public/vepro-knedlo-zelo_20102_0.jpg?h=218229d9"
+                            alt="Knedlo vepřo zelo"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4><a href="https://www.apetitonline.cz/recept/vepro-knedlo-zelo" target="_blank">Knedlo
+                                    vepřo
+                                    zelo</a></h4>
+                            <p>Klasické české jídlo s vepřovým, zelím a knedlíky.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="trouba 180 stupnu peceni sladke" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920251.png" alt="Rozehřejte troubu"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Rozehřejte troubu na 180°C</h4>
+                            <p>Při pečení sladkých dezertů vždy troubu nejprve dobře předehřejte na 180 stupňů.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="maso pokojova teplota dele nezrazovat" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Nechte maso odpočinout"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Nechte maso dosáhnout pokojové teploty</h4>
+                            <p>Před vařením nebo pečením maso vyndejte z lednice alespoň na 30 minut.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="sůl dochucení opatrně přidávat" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046781.png" alt="Sůl opatrně"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Dochucujte jídlo solí opatrně</h4>
+                            <p>Sůl přidávejte postupně, lépe je dosolit než jídlo přesolit.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="čerstvé bylinky přidávat na konec" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Čerstvé bylinky"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Bylinky přidávejte na konec vaření</h4>
+                            <p>Čerstvé bylinky zachovají vůni a chuť, pokud je přidáte až na závěr.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="vajíčka pokojová teplota pečení" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046779.png" alt="Vejce pokojová teplota"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Vejce používejte pokojové teploty</h4>
+                            <p>Pokojová teplota vajec zaručí lepší spojení při pečení a vyšší nadýchanost těsta.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="recept" data-klicova-slova="pánvička nepřilnavá olej rozehřát" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Rozehřejte pánev"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h4>Rozehřejte pánev před smažením</h4>
+                            <p>Pánvičku vždy dobře rozehřejte a pak přidejte olej, aby se jídlo nepřilepilo.</p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="uzivatele" data-klicova-slova="uzivatele">
+                    <div class="uzivatel card" data-klicova-slova="@zuzprokopova" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/uzviatele/Prokopova-Zuzana.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zuzana Prokopová</h5>
+                                    <p class="card-text">Username: @zuzprokopova</p>
+                                    <p class="card-text">Bio: Milovnice jídla a cizích jazyků</p>
+                                    <a href="#" class="btn btn-primary">Zobrazit profil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div class="uzivatel card" data-klicova-slova="@progmar" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/uzviatele/Prokop-Martin.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Martin Prokop</h5>
+                                    <p class="card-text">Username: @progmar</p>
+                                    <p class="card-text">Bio: Bývalý úspěšný kuchař.</p>
+                                    <a href="#" class="btn btn-primary">Zobrazit profil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uzivatel card" data-klicova-slova="@vranovanna" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/uzviatele/Vranova-Anna.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Anna Vránová</h5>
+                                    <p class="card-text">Username: @vranovanna</p>
+                                    <p class="card-text">Bio: ✨ anna ✨</p>
+                                    <a href="#" class="btn btn-primary">Zobrazit profil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uzivatel card" data-klicova-slova="@gerychovabarca" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/uzviatele/Gerychova-Barbora.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Barbora Gerychová</h5>
+                                    <p class="card-text">Username: @gerychovabarca</p>
+                                    <p class="card-text">Bio: Doktorka</p>
+                                    <a href="#" class="btn btn-primary">Zobrazit profil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uzivatel card" data-klicova-slova="@jarkabelzova" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/uzviatele/Belzova-Jarmila.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jarmila Belzová</h5>
+                                    <p class="card-text">Username: @jarkabelzova</p>
+                                    <p class="card-text">Bio: Milovnice vaření a pečení. Nejlepší je pavlova.</p>
+                                    <a href="#" class="btn btn-primary">Zobrazit profil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Telefon:</strong> +420 123 456 789</li>
+                        <li><strong>Email:</strong> <a href="mailto:info@tastetheworld.cz"
+                                class="text-light">info@tastetheworld.cz</a></li>
+                        <li><strong>Adresa:</strong> Chuťová 3023/1, Praha 100 00</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-3 text-md-end">
+                    <h5>Autor</h5>
+                    <p>
+                        <a href="https://www.facebook.com/stepa.prokop/" target="_blank"
+                            class="text-light text-decoration-underline">
+                            Štěpán Prokop, OAUH
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center">
+                <small>&copy; 2025 Taste The World – Všechna práva vyhrazena</small>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("vyhledavaniForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const hledanyText = document.getElementById("vyhledat").value.trim().toLowerCase();
+            const vysledkyDiv = document.getElementById("vysledky");
+            const puvodniObsah = document.getElementById("puvodniObsah");
+            vysledkyDiv.innerHTML = "";
+            puvodniObsah.style.display = "none";
+
+            if (hledanyText === "") {
+                alert("Zadejte pro vyhledávání text!");
+                return;
+            }
+
+            const recepty = Array.from(document.querySelectorAll(".recept"));
+            const uzivatele = Array.from(document.querySelectorAll(".uzivatel"));
+            let necoNalezeno = false;
+
+            if (hledanyText.includes("recept")) {
+                recepty.forEach(recept => {
+                    const klon = recept.cloneNode(true);
+                    klon.style.display = "block";
+                    vysledkyDiv.appendChild(klon);
+                });
+                necoNalezeno = recepty.length > 0;
+            } else if (hledanyText.includes("uzivatel")) {
+                uzivatele.forEach(uzivatel => {
+                    const klon = uzivatel.cloneNode(true);
+                    klon.style.display = "block";
+                    vysledkyDiv.appendChild(klon);
+                });
+                necoNalezeno = uzivatele.length > 0;
+            } else {
+                recepty.forEach(recept => {
+                    const klicovaSlova = recept.getAttribute("data-klicova-slova").toLowerCase();
+                    if (klicovaSlova.includes(hledanyText)) {
+                        const klon = recept.cloneNode(true);
+                        klon.style.display = "block";
+                        vysledkyDiv.appendChild(klon);
+                        necoNalezeno = true;
+                    }
+                });
+            }
+
+            if (!necoNalezeno) {
+                vysledkyDiv.innerHTML = `<div class="alert alert-warning">Nic nebylo nalezeno.</div>`;
+            }
+        });
+    </script>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/tinymce/tinymce.min.js"></script>
