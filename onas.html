@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" href="img/head.png" type="image/png">
     <style>
         .carousel-caption {
             background-color: rgba(114, 114, 114, 0.635);
@@ -56,10 +57,10 @@
 
     <div class="container mt-5">
         <h1 class="h1 text-center">O Nás</h1><br>
-        <p>Vítejte na <strong>Taste the World</strong> – místě, kde se chutě stávají dobrodružstvím a každé jídlo cestou
-            kolem světa.</p>
+        <p>Vítejte na <strong>Taste the World</strong> ...</p>
+
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <p>Naším posláním je propojit kultury skrze gastronomii a přinést vám ty nejzajímavější, nejchutnější a
                     nejautentičtější recepty z různých koutů planety. Zaměřujeme se především na asijskou kuchyni a
                     poklady
@@ -73,9 +74,10 @@
                 <p>Chceme ukázat, že dobré jídlo není otázkou luxusu nebo vzdálené restaurace – je to něco, co si může
                     vytvořit každý doma. A pokud vás láká ochutnat něco jiného než řízek s bramborem nebo těstoviny s
                     kečupem, jste tu správně.</p>
+
             </div>
-            <div class="col-6">
-                <div class="carousel slide" data-bs-ride="carousel">
+            <div class="col-md-6 col-12">
+                <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
@@ -87,21 +89,24 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/sushi.png" class="d-block w-100" alt="Sushi">
+                            <img src="img/sushi.png" class="d-block w-100 img-fluid" alt="Sushi"
+                                style="max-height:400px; object-fit:cover;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Sushi</h5>
                                 <p>Čerstvé a autentické chutě Japonska.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/seafood.png" class="d-block w-100" alt="Mořské plody">
+                            <img src="img/seafood.png" class="d-block w-100 img-fluid" alt="Mořské plody"
+                                style="max-height:400px; object-fit:cover;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Mořské plody</h5>
                                 <p>Ochutnej poklady oceánu.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/thai.png" class="d-block w-100" alt="Thajské jídlo">
+                            <img src="img/thai.png" class="d-block w-100 img-fluid" alt="Thajské jídlo"
+                                style="max-height:400px; object-fit:cover;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Thajské kari</h5>
                                 <p>Pikantní dobrodružství na talíři.</p>
@@ -120,7 +125,6 @@
                         <span class="visually-hidden">Další</span>
                     </button>
                 </div>
-
             </div>
         </div><br>
 
@@ -144,19 +148,19 @@
 
             <h5>Pošlete nám zprávu:</h5>
             <form action="">
-                <div class="input-group mb-5">
+                <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-inbox"></i></span>
-                    <div class="form-floating">
+                    <div class="form-floating flex-grow-1">
                         <input type="email" id="emailzaslat" class="form-control" placeholder="Váš email" required>
                         <label for="emailzaslat">Váš email</label>
                     </div>
                 </div>
-                <div style="margin-top: -30px;">
+                <div class="mb-3">
                     <label for="zprava" class="form-label">Vpište Vaši zprávu:</label>
-                    <textarea name="zprava" id="zprava"></textarea><br>
+                    <textarea name="zprava" id="zprava" class="form-control" rows="5"></textarea>
                 </div>
-                <div style="padding: 20px;">
-                    <input type="submit" class="form-control bg-dark" style="color: white; ">
+                <div class="mb-3">
+                    <input type="submit" class="form-control bg-dark text-white" value="Odeslat">
                 </div>
             </form>
         </div>

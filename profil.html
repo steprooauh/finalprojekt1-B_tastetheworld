@@ -2,16 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TasteTheWorld</title>
-    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="img/head.png" type="image/png" />
     <style>
         .profile {
             border-radius: 50%;
             border: 2px solid black;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        /* Upravíme padding inputů a tlačítka pro lepší vzhled na mobilech */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            margin-bottom: 1rem;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -48,7 +68,7 @@
                             <li><a class="dropdown-item" href="profil.html">Profil</a></li>
                             <li><a class="dropdown-item" href="ulozene.html">Uložené recepty</a></li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <hr class="dropdown-divider" />
                             </li>
                             <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
                         </ul>
@@ -59,15 +79,31 @@
     </nav>
 
     <div class="container mt-5">
-        <h2>Váš profil</h2><br>
+        <h2>Váš profil</h2>
+        <br />
         <form action="">
             <div class="row">
-                <div class="col-6">
-                    <p>Jméno: <input type="text" required></p>
-                    <p>Příjmení: <input type="text" required></p>
-                    <p>Uživatelské jméno: <input type="text" required></p>
-                    <p>Email: <input type="email" required></p>
-                    <p>Stát: <select class="form-select" id="stat" aria-label="Vyberte stát" required>
+                <!-- upravené na col-md-6, col-12 aby na mobilu byla jedna pod druhou -->
+                <div class="col-md-6 col-12">
+                    <p>
+                        Jméno:
+                        <input type="text" required />
+                    </p>
+                    <p>
+                        Příjmení:
+                        <input type="text" required />
+                    </p>
+                    <p>
+                        Uživatelské jméno:
+                        <input type="text" required />
+                    </p>
+                    <p>
+                        Email:
+                        <input type="email" required />
+                    </p>
+                    <p>
+                        Stát:
+                        <select class="form-select" id="stat" aria-label="Vyberte stát" required>
                             <option value="" class="form-label" selected disabled>Vyberte stát</option>
                             <option value="CZ">Česká republika</option>
                             <option value="SK">Slovensko</option>
@@ -79,17 +115,24 @@
                             <option value="ES">Španělsko</option>
                             <option value="US">Spojené státy</option>
                             <option value="GB">Velká Británie</option>
-                        </select></p>
-                    <p>Heslo: <input type="password" required></p>
-                    <p>Heslo znova: <input type="password" required></p>
+                        </select>
+                    </p>
+                    <p>
+                        Heslo:
+                        <input type="password" required />
+                    </p>
+                    <p>
+                        Heslo znova:
+                        <input type="password" required />
+                    </p>
                 </div>
-                <div class="col-6">
-                    <img class="profile" src="img/pfp.jpg" alt="Profilová fotka"><br>
-                    <label for="">Vyberte profilovou fotku</label>
-                    <input type="file" accept=".png, .jpg, .webp" name="" id="">
+                <div class="col-md-6 col-12 d-flex flex-column align-items-center">
+                    <img class="profile" src="img/pfp.jpg" alt="Profilová fotka" />
+                    <label for="profilePic" class="form-label">Vyberte profilovou fotku</label>
+                    <input type="file" accept=".png, .jpg, .webp" id="profilePic" />
                 </div>
             </div>
-            <input type="submit">
+            <input type="submit" class="btn btn-dark" value="Uložit změny" />
         </form>
     </div>
 
