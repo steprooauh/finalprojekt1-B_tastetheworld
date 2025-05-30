@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TasteTheWorld</title>
-    <link rel="stylesheet" href="node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="icon" href="img/head.png" type="image/png">
+    <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/img/head.png" type="image/png">
     <style>
         html,
         body {
@@ -70,16 +70,23 @@
 
     <main class="container mt-5">
         <div class="card shadow mb-4">
-            <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                <img src="https://via.placeholder.com/120" alt="Profilovka" class="rounded-circle me-md-4 mb-3 mb-md-0">
-                <div>
-                    <h4 class="mb-0">Uživatelské jméno</h4>
-                    <small class="text-muted">Např. člen od: 2023</small>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <img src="assets/img/uzviatele/Belzova-Jarmila.jpg" style="width: 100%; max-width: 300px; border: 2px solid black;"
+                            alt="Profilovka" class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h2 style="font-weight: bolder;">Jarmila Belzová</h2>
+                        <h4>@jarkabelzova</h4>
+                        <p><strong>Bio:</strong>Milovnice vaření a pečení. Nejlepší je pavlova.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Navigace na záložky -->
+
         <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts"
@@ -103,7 +110,20 @@
                 <p class="text-muted">Zatím žádné informace.</p>
             </div>
             <div class="tab-pane fade" id="friends" role="tabpanel">
-                <p class="text-muted">Zatím žádní přátelé.</p>
+                 <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm" style="max-width: 300px; margin: 0 auto;">
+                            <div class="card-body text-center">
+                                <img src="assets/img/uzviatele/Prokopova-Zuzana.jpg" alt="Profilovka přítele"
+                                    class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                                <h5 class="card-title">@zuzprokopova</h5>
+                                <a href="zuzprokopova.html" class="btn btn-primary" type="button">
+                                    Zobrazit detaily
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </main>
@@ -141,8 +161,8 @@
         </div>
     </footer>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/node_modules/tinymce/tinymce.min.js"></script>
 </body>
 
 </html>

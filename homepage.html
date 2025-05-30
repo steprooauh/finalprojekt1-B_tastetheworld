@@ -7,6 +7,7 @@
     <title>TasteTheWorld</title>
     <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/node_modules/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="icon" href="assets/img/head.png" type="image/png">
     <style>
@@ -117,8 +118,8 @@
                                 </span>
                             </button>
                         </h2>
-                        <div id="collapseOneTop" class="accordion-collapse collapse"
-                            aria-labelledby="headingOneTop" data-bs-parent="#accordionTop">
+                        <div id="collapseOneTop" class="accordion-collapse collapse" aria-labelledby="headingOneTop"
+                            data-bs-parent="#accordionTop">
                             <div class="accordion-body">
                                 Tradiční vývar z hovězích kostí, rýžové nudle, bylinky a chilli – oblíbený pokrm celého
                                 světa.
@@ -285,44 +286,115 @@
             </div>
             <div class="col-md-6 col-12" style="margin-top: -45px;">
                 <h4 class="mb-3">Doporučené teploty na rozehřátí trouby</hč>
-                <table class="table table-striped table-bordered">
                     <table class="table table-striped table-bordered">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Typ jídla</th>
-                                <th>Teplota trouby (°C)</th>
-                                <th>Poznámka</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Pečivo (chléb, rohlíky)</td>
-                                <td>220</td>
-                                <td>Vyšší teplota pro křupavou kůrku</td>
-                            </tr>
-                            <tr>
-                                <td>Zákusky a koláče</td>
-                                <td>180 - 200</td>
-                                <td>Střední teplota pro rovnoměrné pečení</td>
-                            </tr>
-                            <tr>
-                                <td>Masové pečeně</td>
-                                <td>160 - 180</td>
-                                <td>Dlouhé pečení při nižší teplotě</td>
-                            </tr>
-                            <tr>
-                                <td>Zelenina</td>
-                                <td>200 - 220</td>
-                                <td>Vyšší teplota pro rychlé pečení</td>
-                            </tr>
-                            <tr>
-                                <td>Pizza</td>
-                                <td>250</td>
-                                <td>Maximální teplota pro dokonalou pizzu</td>
-                            </tr>
-                        </tbody>
+                        <table class="table table-striped table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Typ jídla</th>
+                                    <th>Teplota trouby (°C)</th>
+                                    <th>Poznámka</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pečivo (chléb, rohlíky)</td>
+                                    <td>220</td>
+                                    <td>Vyšší teplota pro křupavou kůrku</td>
+                                </tr>
+                                <tr>
+                                    <td>Zákusky a koláče</td>
+                                    <td>180 - 200</td>
+                                    <td>Střední teplota pro rovnoměrné pečení</td>
+                                </tr>
+                                <tr>
+                                    <td>Masové pečeně</td>
+                                    <td>160 - 180</td>
+                                    <td>Dlouhé pečení při nižší teplotě</td>
+                                </tr>
+                                <tr>
+                                    <td>Zelenina</td>
+                                    <td>200 - 220</td>
+                                    <td>Vyšší teplota pro rychlé pečení</td>
+                                </tr>
+                                <tr>
+                                    <td>Pizza</td>
+                                    <td>250</td>
+                                    <td>Maximální teplota pro dokonalou pizzu</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </table>
-                </table>
+            </div>
+        </div>
+
+
+
+
+        <div class="container mt-5 mb-4">
+            <h2 class="mb-4">Příspěvky</h2>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-2">
+                        <a href="zuzprokopova.html">
+                            <img src="assets/img/uzviatele/Prokopova-Zuzana.jpg" class="rounded-circle me-2"
+                                alt="Profilovka" style="width: 100px; border: 2px solid black;">
+                        </a>
+                        <div>
+                            <strong>Zuzana Prokopová</strong><br>
+                            <small class="text-muted">30. května 2025 • 🌍 Taste The World</small>
+                        </div>
+                    </div>
+
+                    <p>
+                        Dnes jsem měla na oběd svíčkovou, a co vy, jak se vůbec máte? <i
+                            class="fa-solid fa-bowl-food"></i>
+                    </p>
+                    <img src="https://cz.rc-cdn.community.thermomix.com/recipeimage/5wt0j623-11f38-097312-cfcd2-jl0726r3/40235c92-65a2-47b5-a9a8-d6efdb7fd84f/original/svickova-omacka-s-knedlikem.jpg"
+                        style="width: 400px;" alt="Obrázek příspěvku" class="img-fluid rounded mt-2">
+
+                    <div class="mt-3 d-flex gap-3">
+                        <button class="btn btn-outline-primary btn-sm">4 <i class="bi bi-hand-thumbs-up"></i> To
+                            se mi líbí</button>
+                        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse"
+                            data-bs-target="#komentareZuzana" aria-expanded="false" aria-controls="komentareZuzana">
+                            <i class="bi bi-chat-left-text"></i> Komentář
+                        </button>
+                        <button class="btn btn-outline-success btn-sm"><i class="bi bi-share"></i> Sdílet</button>
+                    </div>
+
+                    <div class="collapse mt-3" id="komentareZuzana">
+                        <hr>
+
+                        <div class="card mb-3">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="assets/img/uzviatele/Belzova-Jarmila.jpg" class="rounded-circle me-3"
+                                    style="width: 70px; height: 70px; object-fit: cover;" alt="Profilovka">
+                                <div>
+                                    <strong>Jarmila:</strong>
+                                    <p class="mb-0">Svíčkovou miluju! <i class="bi bi-heart-fill text-danger"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="assets/img/uzviatele/Gerychova-Barbora.jpg" class="rounded-circle me-3"
+                                    style="width: 70px; height: 70px; object-fit: cover;" alt="Profilovka">
+                                <div>
+                                    <strong>Barbora:</strong>
+                                    <p class="mb-0">Ja ji moc nemusím 😞</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group mt-4">
+                            <input type="text" class="form-control" placeholder="Napiš komentář...">
+                            <button class="btn btn-primary" type="button">Odeslat</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
