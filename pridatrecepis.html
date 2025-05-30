@@ -14,6 +14,20 @@
         .fotky {
             background-color: rgba(0, 0, 0, 0.127);
         }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
     </style>
 </head>
 
@@ -59,7 +73,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <h2 style="margin-top: 30px;">Přidat recept</h2>
         <p>Vyplňte jednoduchý formulář a zašlete ho našemu týmu. My ho zhodnotíme a přidáme k dalším, samozřejmě Vás
             nezapomeneme označit.</p>
@@ -119,13 +133,15 @@
                     <input type="file" id="fotka3" class="form-control mb-3" accept=".jpg, .png, .webp">
                     <input type="file" id="fotka4" class="form-control mb-3" accept=".jpg, .png, .webp">
                 </div>
-            </div>
+            </div><br>
 
             <button class="btn btn-dark w-100" type="submit">
                 <strong><i class="fa-solid fa-paper-plane"></i> Odeslat</strong>
             </button>
         </form>
 
+
+    </main>
 
         <footer class="bg-dark text-light py-4 mt-5">
             <div class="container">

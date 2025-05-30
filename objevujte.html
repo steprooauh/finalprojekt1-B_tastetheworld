@@ -86,6 +86,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
+            <p style="margin-top: -45px; font-size: small;">Pokud budete chtít uživatele, rozklikněte si všechny pomocí napsáním "uzivatele" do vyhledávacího pole a nebo napište "@" a jejich uživatelské jméno.</p>
         </form>
 
         <div id="vysledky" class="mb-4"></div>
@@ -503,7 +504,20 @@
                         necoNalezeno = true;
                     }
                 });
+
+                if (hledanyText.startsWith("@")) {
+                    uzivatele.forEach(uzivatel => {
+                        const klicovaSlova = uzivatel.getAttribute("data-klicova-slova").toLowerCase();
+                        if (klicovaSlova.includes(hledanyText)) {
+                            const klon = uzivatel.cloneNode(true);
+                            klon.style.display = "block";
+                            vysledkyDiv.appendChild(klon);
+                            necoNalezeno = true;
+                        }
+                    });
+                }
             }
+
 
             if (!necoNalezeno) {
                 vysledkyDiv.innerHTML = `<div class="alert alert-warning">Nic nebylo nalezeno.</div>`;

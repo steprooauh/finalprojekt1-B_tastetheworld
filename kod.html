@@ -24,6 +24,20 @@
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
             outline: none;
         }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
     </style>
 </head>
 
@@ -59,9 +73,9 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <main class="container mt-5">
         <h4 class="text-center mb-4">Zadejte 6-místný kód</h4>
-        <form action="">
+        <form action="prihlaseni.html">
             <div class="row justify-content-center g-3">
                 <div class="col-2 col-sm-1">
                     <input type="text" class="form-control code-input" maxlength="1" pattern="[0-9]*"
@@ -92,7 +106,7 @@
         </form>
         <p style="font-size: small; margin-top: 30px;">Pokud Vám kód nedošel, zkuste mail poslat znovu: <a
                 href="">Zaslat mail znovu!</a></p>
-    </div>
+        </main>
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
