@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/img/head.png" type="image/png">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <img src="assets/img/uzviatele/Prokop-Martin.jpg"
+                            style="width: 100%; max-width: 300px; border: 2px solid black;" alt="Profilovka"
+                            class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h2 style="font-weight: bolder;">Martin Prokop</h2>
+                        <h4>@progmar</h4>
+                        <p><strong>Bio:</strong> Bývalý úspěšný kuchař a nynější motorkář</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts"
+                    type="button" role="tab">Příspěvky</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"
+                    role="tab">Informace</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends" type="button"
+                    role="tab">Přátelé</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="profileTabsContent">
+            <div class="tab-pane fade show active" id="posts" role="tabpanel">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2">
+                            <a href="progmar.html">
+                                <img src="assets/img/uzviatele/Prokop-Martin.jpg" class="rounded-circle me-2"
+                                    alt="Profilovka" style="width: 100px; border: 2px solid black;">
+                            </a>
+                            <div>
+                                <strong>Martin Prokop</strong><br>
+                                <small class="text-muted">28. května 2025 • 🌍 Taste The World</small>
+                            </div>
+                        </div>
+
+                        <p>
+                            Na oběd byly stařenčiny fazole podle mojí stařenky. Dnes se mi fakt povedly. 🙂
+                        </p>
+                        <img src="https://i.ytimg.com/vi/Bx5Y80R3EFA/maxresdefault.jpg"
+                            style="width: 400px;" alt="Obrázek příspěvku" class="img-fluid rounded mt-2">
+
+                        <div class="mt-3 d-flex gap-3">
+                            <button class="btn btn-outline-primary btn-sm">3 <i class="bi bi-hand-thumbs-up"></i> To
+                                se mi líbí</button>
+                            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse"
+                                data-bs-target="#komentareZuzana" aria-expanded="false" aria-controls="komentareZuzana">
+                                <i class="bi bi-chat-left-text"></i> Komentář
+                            </button>
+                            <button class="btn btn-outline-success btn-sm"><i class="bi bi-share"></i> Sdílet</button>
+                        </div>
+
+                        <div class="collapse mt-3" id="komentareZuzana">
+                            <hr>
+
+                            <div class="card mb-3">
+                                <div class="card-body d-flex align-items-center">
+                                    <img src="assets/img/uzviatele/Belzova-Jarmila.jpg" class="rounded-circle me-3"
+                                        style="width: 70px; height: 70px; object-fit: cover;" alt="Profilovka">
+                                    <div>
+                                        <strong>Jarmila:</strong>
+                                        <p class="mb-0">To vypadá dobře Martine! 😋</i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group mt-4">
+                                <input type="text" class="form-control" placeholder="Napiš komentář...">
+                                <button class="btn btn-primary" type="button">Odeslat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2">
+                            <a href="progmar.html">
+                                <img src="assets/img/uzviatele/Prokop-Martin.jpg" class="rounded-circle me-2"
+                                    alt="Profilovka" style="width: 100px; border: 2px solid black;">
+                            </a>
+                            <div>
+                                <strong>Martin Prokop</strong><br>
+                                <small class="text-muted">27. května 2025 • 🌍 Taste The World</small>
+                            </div>
+                        </div>
+
+                        <p>
+                            Dnes jsem stihl až večeři, udělal jsem si vojáky! 💂‍♀️
+                        </p>
+                        <img src="https://ms2.ostium.cz/instance/web-recepty/j2OBwfA6/h389w574t.jpg"
+                            style="width: 400px;" alt="Obrázek příspěvku" class="img-fluid rounded mt-2">
+
+                        <div class="mt-3 d-flex gap-3">
+                            <button class="btn btn-outline-primary btn-sm">1 <i class="bi bi-hand-thumbs-up"></i> To
+                                se mi líbí</button>
+                            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse"
+                                data-bs-target="#komentareZuzana2" aria-expanded="false" aria-controls="komentareZuzana2">
+                                <i class="bi bi-chat-left-text"></i> Komentář
+                            </button>
+                            <button class="btn btn-outline-success btn-sm"><i class="bi bi-share"></i> Sdílet</button>
+                        </div>
+
+                        <div class="collapse mt-3" id="komentareZuzana2">
+                            <div class="input-group mt-4">
+                                <input type="text" class="form-control" placeholder="Napiš komentář...">
+                                <button class="btn btn-primary" type="button">Odeslat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="about" role="tabpanel">
+                <p class="text-muted">Zatím žádné informace.</p>
+            </div>
+            <div class="tab-pane fade" id="friends" role="tabpanel">
+                <p class="text-muted">Zatím žádní přátelé.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Telefon:</strong> +420 123 456 789</li>
+                        <li><strong>Email:</strong> <a href="mailto:info@tastetheworld.cz"
+                                class="text-light">info@tastetheworld.cz</a></li>
+                        <li><strong>Adresa:</strong> Chuťová 3023/1, Praha 100 00</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-3 text-md-end">
+                    <h5>Autor</h5>
+                    <p>
+                        <a href="https://www.facebook.com/stepa.prokop/" target="_blank"
+                            class="text-light text-decoration-underline">
+                            Štěpán Prokop, OAUH
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center">
+                <small>&copy; 2025 Taste The World – Všechna práva vyhrazena</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>

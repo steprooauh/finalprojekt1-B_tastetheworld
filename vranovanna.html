@@ -2,36 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TasteTheWorld</title>
-    <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
-    <link rel="icon" href="assets/img/head.png" type="image/png" />
+    <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/img/head.png" type="image/png">
     <style>
-        .profile {
-            border-radius: 50%;
-            border: 2px solid black;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 1rem;
+        html,
+        body {
+            height: 100%;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select,
-        input[type="file"] {
-            width: 100%;
-            padding: 0.375rem 0.75rem;
-            margin-bottom: 1rem;
+        body {
+            display: flex;
+            flex-direction: column;
         }
-        input[type="submit"] {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 1rem;
+
+        main {
+            flex: 1;
         }
     </style>
 </head>
@@ -68,7 +58,7 @@
                             <li><a class="dropdown-item" href="profil.html">Profil</a></li>
                             <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
                         </ul>
@@ -78,62 +68,52 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <h2>Váš profil</h2>
-        <br />
-        <form action="">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <p>
-                        Jméno:
-                        <input type="text" required />
-                    </p>
-                    <p>
-                        Příjmení:
-                        <input type="text" required />
-                    </p>
-                    <p>
-                        Uživatelské jméno:
-                        <input type="text" required />
-                    </p>
-                    <p>
-                        Email:
-                        <input type="email" required />
-                    </p>
-                    <p>
-                        Stát:
-                        <select class="form-select" id="stat" aria-label="Vyberte stát" required>
-                            <option value="" class="form-label" selected disabled>Vyberte stát</option>
-                            <option value="CZ">Česká republika</option>
-                            <option value="SK">Slovensko</option>
-                            <option value="DE">Německo</option>
-                            <option value="AT">Rakousko</option>
-                            <option value="PL">Polsko</option>
-                            <option value="FR">Francie</option>
-                            <option value="IT">Itálie</option>
-                            <option value="ES">Španělsko</option>
-                            <option value="US">Spojené státy</option>
-                            <option value="GB">Velká Británie</option>
-                        </select>
-                    </p>
-                    <p>
-                        Heslo:
-                        <input type="password" required />
-                    </p>
-                    <p>
-                        Heslo znova:
-                        <input type="password" required />
-                    </p>
-                </div>
-                <div class="col-md-6 col-12 d-flex flex-column align-items-center">
-                    <img class="profile" src="assets/img/pfp.jpg" alt="Profilová fotka" />
-                    <label for="profilePic" class="form-label">Vyberte profilovou fotku</label>
-                    <input type="file" accept=".png, .jpg, .webp" id="profilePic" />
+    <main class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <img src="assets/img/uzviatele/Vranova-Anna.jpg" style="width: 100%; max-width: 300px; border: 2px solid black;"
+                            alt="Profilovka" class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h2 style="font-weight: bolder;">Anna Vránová</h2>
+                        <h4>@vranovanna</h4>
+                        <p><strong>Bio:</strong> ✨ anna ✨</p>
+                    </div>
                 </div>
             </div>
-            <input type="submit" class="btn btn-dark" value="Uložit změny" />
-        </form>
-    </div>
+        </div>
+
+
+        <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts"
+                    type="button" role="tab">Příspěvky</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"
+                    role="tab">Informace</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends" type="button"
+                    role="tab">Přátelé</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="profileTabsContent">
+            <div class="tab-pane fade show active" id="posts" role="tabpanel">
+                <p class="text-muted">Zatím žádné příspěvky.</p>
+            </div>
+            <div class="tab-pane fade" id="about" role="tabpanel">
+                <p class="text-muted">Zatím žádné informace.</p>
+            </div>
+            <div class="tab-pane fade" id="friends" role="tabpanel">
+                <p class="text-muted">Zatím žádní přátelé.</p>
+            </div>
+        </div>
+    </main>
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
@@ -167,7 +147,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/node_modules/tinymce/tinymce.min.js"></script>
 </body>

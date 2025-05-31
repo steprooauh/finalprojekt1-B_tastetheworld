@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTheWorld</title>
+    <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/img/head.png" type="image/png">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-bowl-food"></i> Taste The World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Přepnout navigaci">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recepty.html">Recepty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="objevujte.html">Objevujte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progres.html">Progres</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Účet
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="ulozene.html">Přátelé</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Odhlásit se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <img src="assets/img/uzviatele/Gerychova-Barbora.jpg" style="width: 100%; max-width: 300px; border: 2px solid black;"
+                            alt="Profilovka" class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h2 style="font-weight: bolder;">Barbora Gerychová</h2>
+                        <h4>@gerychovabarca</h4>
+                        <p><strong>Bio:</strong> Zdravotní sestra. Umím velice šikovně vařit a péct!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts"
+                    type="button" role="tab">Příspěvky</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"
+                    role="tab">Informace</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends" type="button"
+                    role="tab">Přátelé</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="profileTabsContent">
+            <div class="tab-pane fade show active" id="posts" role="tabpanel">
+                <p class="text-muted">Zatím žádné příspěvky.</p>
+            </div>
+            <div class="tab-pane fade" id="about" role="tabpanel">
+                <p class="text-muted">Zatím žádné informace.</p>
+            </div>
+            <div class="tab-pane fade" id="friends" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm" style="max-width: 300px; margin: 0 auto;">
+                            <div class="card-body text-center">
+                                <img src="assets/img/uzviatele/Belzova-Jarmila.jpg" alt="Profilovka přítele"
+                                    class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                                <h5 class="card-title">@jarkabelzova</h5>
+                                <a href="jarkabelzova.html" class="btn btn-primary" type="button">
+                                    Zobrazit detaily
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm" style="max-width: 300px; margin: 0 auto;">
+                            <div class="card-body text-center">
+                                <img src="assets/img/uzviatele/Prokopova-Zuzana.jpg" alt="Profilovka přítele"
+                                    class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                                <h5 class="card-title">@zuzprokopova</h5>
+                                <a href="zuzprokopova.html" class="btn btn-primary" type="button">
+                                    Zobrazit detaily
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Telefon:</strong> +420 123 456 789</li>
+                        <li><strong>Email:</strong> <a href="mailto:info@tastetheworld.cz"
+                                class="text-light">info@tastetheworld.cz</a></li>
+                        <li><strong>Adresa:</strong> Chuťová 3023/1, Praha 100 00</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-3 text-md-end">
+                    <h5>Autor</h5>
+                    <p>
+                        <a href="https://www.facebook.com/stepa.prokop/" target="_blank"
+                            class="text-light text-decoration-underline">
+                            Štěpán Prokop, OAUH
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center">
+                <small>&copy; 2025 Taste The World – Všechna práva vyhrazena</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/node_modules/tinymce/tinymce.min.js"></script>
+</body>
+
+</html>
