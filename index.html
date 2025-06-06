@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/node_modules/bootswatch/dist/zephyr/bootstrap.min.css">
     <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/node_modules/flag-icons/css/flag-icons.min.css">
     <link rel="icon" href="assets/img/head.png" type="image/png">
     <style>
         html,
@@ -158,31 +159,159 @@
     </div>
 
     <div class="container mt-5" style="padding: 20px;">
-        <h1>🍽 Taste the World – Ochutnej svět na talíři</h1>
-        <p>Vítej na stránkách Taste the World, kde každé jídlo vypráví příběh. Přinášíme ti ty nejchutnější recepty z
+        <h1 class="mb-4 text-center">🍽 Taste the World – Ochutnej svět na talíři</h1>
+        <p class="lead text-center">
+            Vítej na stránkách Taste the World, kde každé jídlo vypráví příběh. Přinášíme ti ty nejchutnější recepty z
             Asie a mořských oblastí, které si zamiluješ na první sousto. Objevuj nové ingredience, nauč se vařit
-            exotické pokrmy a rozšiř si kulinářské obzory – pohodlně z vlastní kuchyně.</p>
-
-        <h2>🌏 Co u nás najdeš?</h2>
-        <ul>
-            <li>Autentické recepty z Japonska, Thajska, Vietnamu, Číny a dalších koutů Asie.</li>
-            <li>Inspiraci z oceánu – od sushi přes krevety až po lahodné rybí pokrmy.</li>
-            <li>Tipy na vaření, které ti usnadní přípravu i těch nejexotičtějších jídel.</li>
-            <li>Zajímavosti z gastronomie, které ti otevřou dveře do jiných kultur.</li>
-        </ul>
-
-        <h2>🧑‍🍳 Proč právě Taste the World?</h2>
-        <p>Protože věříme, že jídlo spojuje lidi. A že každý má právo ochutnat svět – i bez cestování. Naše recepty jsou
-            srozumitelné, chutné a dostupné. Ať už jsi začátečník nebo zkušený kuchař, u nás si najdeš to své.</p>
-
-        <h2>🔥 Začni vařit hned teď</h2>
-        <p>Prohlédni si naše nejnovější recepty, inspiruj se oblíbenými pokrmy a vydej se na cestu chutí. Třeba zjistíš,
-            že tvoje nové oblíbené jídlo pochází z druhého konce světa.</p>
-
-        <p>
-            <a href="prihlaseni.html" class="btn btn-primary me-2">🔎 Prozkoumat recepty</a>
-            <a href="onas.html" class="btn btn-outline-secondary me-2">📖 O nás & Kontakt</a>
+            exotické pokrmy a rozšiř si kulinářské obzory – pohodlně z vlastní kuchyně.
         </p>
+
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 mt-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        🌏 Co u nás najdeš?
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Autentické recepty z Japonska, Thajska, Vietnamu, Číny a dalších koutů Asie.</li>
+                            <li>Inspiraci z oceánu – od sushi přes krevety až po lahodné rybí pokrmy.</li>
+                            <li>Tipy na vaření, které ti usnadní přípravu i těch nejexotičtějších jídel.</li>
+                            <li>Zajímavosti z gastronomie, které ti otevřou dveře do jiných kultur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        🧑‍🍳 Proč právě Taste the World?
+                    </div>
+                    <div class="card-body">
+                        <p>Protože věříme, že jídlo spojuje lidi. A že každý má právo ochutnat svět – i bez cestování.
+                            Naše recepty jsou
+                            srozumitelné, chutné a dostupné. Ať už jsi začátečník nebo zkušený kuchař, u nás si najdeš
+                            to své.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        🔥 Začni vařit hned teď
+                    </div>
+                    <div class="card-body">
+                        <p>Prohlédni si naše nejnovější recepty, inspiruj se oblíbenými pokrmy a vydej se na cestu
+                            chutí. Třeba zjistíš,
+                            že tvoje nové oblíbené jídlo pochází z druhého konce světa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 - nová karta -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header bg-light">
+                        💬 Přidej se k naší komunitě
+                    </div>
+                    <div class="card-body">
+                        <p>Staň se součástí Taste the World – sdílej své recepty, zkušenosti a inspiruj ostatní.
+                            Společně tvoříme svět chutí!</p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <a href="prihlaseni.html" class="btn btn-primary me-2">🔎 Prozkoumat recepty</a>
+        <a href="onas.html" class="btn btn-outline-secondary me-2">📖 O nás & Kontakt</a>
+        </p><br>
+
+
+        <h2>Nejčastější otázky:</h2>
+        <div class="accordion" id="accordionTop">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOneTop">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOneTop" aria-expanded="true" aria-controls="collapseOneTop">
+                        1. Jsou recepty ověřené nebo přispívají i uživatelé?
+                    </button>
+                </h2>
+                <div id="collapseOneTop" class="accordion-collapse collapse" aria-labelledby="headingOneTop"
+                    data-bs-parent="#accordionTop">
+                    <div class="accordion-body">
+                        Recepty pochází jak od našeho redakčního týmu, tak od komunity uživatelů. Každý recept prochází
+                        kontrolou, než se zveřejní.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwoTop">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwoTop" aria-expanded="false" aria-controls="collapseTwoTop">
+                        2. Jak můžu najít recept podle surovin, které mám doma?
+                    </button>
+                </h2>
+                <div id="collapseTwoTop" class="accordion-collapse collapse" aria-labelledby="headingTwoTop"
+                    data-bs-parent="#accordionTop">
+                    <div class="accordion-body">
+                        Zatím tuto funkci nemáme.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThreeTop">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThreeTop" aria-expanded="false" aria-controls="collapseThreeTop">
+                        3. Můžu si vytvořit vlastní sbírku oblíbených receptů?
+                    </button>
+                </h2>
+                <div id="collapseThreeTop" class="accordion-collapse collapse" aria-labelledby="headingThreeTop"
+                    data-bs-parent="#accordionTop">
+                    <div class="accordion-body">
+                        Ano, stačí se zaregistrovat nebo přihlásit – pak si můžete ukládat recepty do vlastní knihy
+                        receptů.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFourTop">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFourTop" aria-expanded="false" aria-controls="collapseFourTop">
+                        4. Můžu přidat vlastní recept?
+                    </button>
+                </h2>
+                <div id="collapseFourTop" class="accordion-collapse collapse" aria-labelledby="headingFourTop"
+                    data-bs-parent="#accordionTop">
+                    <div class="accordion-body">
+                        Ano! Po přihlášení můžete přidat vlastní recept přes formulář „Přidat recept“. Prosíme o fotku a
+                        co nejpřesnější postup.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFiveTop">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFiveTop" aria-expanded="false" aria-controls="collapseFiveTop">
+                        5. Jsou u receptů nutriční hodnoty?
+                    </button>
+                </h2>
+                <div id="collapseFiveTop" class="accordion-collapse collapse" aria-labelledby="headingFiveTop"
+                    data-bs-parent="#accordionTop">
+                    <div class="accordion-body">
+                        U některých ano – u vybraných receptů zobrazujeme kalorie, bílkoviny, tuky a sacharidy.
+                        Pracujeme na tom, aby jich bylo víc.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="bg-dark text-light py-4 mt-5">
