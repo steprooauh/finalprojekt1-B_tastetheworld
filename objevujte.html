@@ -86,7 +86,8 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
-            <p style="margin-top: -45px; font-size: small;">Pokud budete chtít uživatele, rozklikněte si všechny pomocí napsáním "uzivatele" do vyhledávacího pole a nebo napište "@" a jejich uživatelské jméno.</p>
+            <p style="margin-top: -45px; font-size: small;">Pokud budete chtít uživatele, rozklikněte si všechny pomocí
+                napsáním "uzivatele" do vyhledávacího pole a nebo napište "@" a jejich uživatelské jméno.</p>
         </form>
 
         <div id="vysledky" class="mb-4"></div>
@@ -327,6 +328,25 @@
                 </div><br>
 
                 <div class="uzivatele" data-klicova-slova="uzivatele">
+                    <div class="uzivatel card" data-klicova-slova="@admin" style="display: none;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.265);
+            border-radius: 20px; margin-top: 10px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="assets/img/uzviatele/Prokop-Stepan.jpg" class="img-fluid rounded-circle"
+                                    style="width: 200px;" alt="zuzprokopova">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Štěpán Prokop</h5>
+                                    <p class="card-text">Username: @admin</p>
+                                    <p class="card-text">Bio: Zakladatel této stránky</p>
+                                    <a href="onas.html" class="btn btn-primary">Kontaktujte vývojáře</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="uzivatel card" data-klicova-slova="@zuzprokopova" style="display: none;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.265);
@@ -346,7 +366,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <div class="uzivatel card" data-klicova-slova="@progmar" style="display: none;
             padding: 20px;
